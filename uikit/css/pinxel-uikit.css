@@ -338,6 +338,11 @@ select {
   outline: none;
 }
 
+.px-prompt-box--command {
+  min-height: 96px;
+  resize: none;
+}
+
 code {
   color: var(--px-muted);
   font-family: var(--px-font-mono);
