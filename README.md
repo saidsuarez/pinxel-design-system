@@ -9,7 +9,6 @@ Brandbook, AI instructions, and UIKit foundation for Pinxel products, websites, 
 - `assets/`: logo, symbol, and favicon.
 - `brandbook/`: source brandbook in Markdown and visual HTML viewer.
 - `uikit/`: component documentation, registry, global CSS, and component CSS.
-- `references/`: external brand references used during exploration.
 
 ## AI Entry Points
 
