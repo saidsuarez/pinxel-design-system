@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Navegación y tabs · UIKit Pinxel</title>
+  <link rel="stylesheet" href="../css/pinxel-uikit.css">
+  <link rel="stylesheet" href="../css/components/buttons.css">
+  <link rel="stylesheet" href="../css/components/navigation.css">
+  <link rel="stylesheet" href="../css/components/tabs.css">
+</head>
+<body>
+  <div class="px-shell">
+    <div class="px-layout">
+      <aside class="px-sidebar" aria-label="Navegación principal">
+        <a class="px-sidebar__brand" href="../index.html" aria-label="UIKit Pinxel">
+          <img src="../../assets/pinxel-logo.svg" alt="Pinxel">
+        </a>
+        <nav class="px-sidebar__nav" aria-label="Componentes">
+          <a href="../index.html">Inicio</a>
+          <a href="./buttons.html">Botones</a>
+          <a href="./forms.html">Formularios</a>
+          <a href="./cards.html">Tarjetas</a>
+          <a href="./badges-alerts.html">Estados</a>
+          <a href="./navigation-tabs.html" aria-current="page">Navegación</a>
+          <a href="./data.html">Datos</a>
+          <a href="./flows.html">Flujos</a>
+        </nav>
+      </aside>
+      <div class="px-layout__content">
+        <main class="px-main">
+    <section class="px-hero">
+      <p class="px-kicker">Componente</p>
+      <h1 class="px-page-title">Navegación y tabs</h1>
+      <p class="px-lead">La navegación debe orientar sin llamar demasiado la atención. Pinxel usa barras limpias, links discretos y CTAs redondeados.</p>
+    </section>
+
+    <section class="px-section">
+      <div class="px-section__head">
+        <h2>Top navigation</h2>
+        <p>Para web, e-commerce, paneles internos o documentación.</p>
+      </div>
+      <div class="px-nav">
+        <div class="px-nav__bar">
+          <img class="px-nav__logo" src="../../assets/pinxel-logo.svg" alt="Pinxel">
+          <div class="px-nav__links">
+            <a href="#" aria-current="page">Productos</a>
+            <a href="#">Paw Studio</a>
+            <a href="#">4Corners</a>
+            <a href="#">Pinxel Lab</a>
+          </div>
+          <button class="px-button px-button--primary" type="button">Crear pedido</button>
+        </div>
+        <div class="px-nav__subbar">
+          <strong>Personalización</strong>
+          <span>Producto · Opciones · Preview · Confirmación</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-section">
+      <div class="px-section__head">
+        <h2>Tabs</h2>
+        <p>Usar pill tabs para modos o filtros; usar tabs subrayados para documentación o secciones de contenido.</p>
+      </div>
+      <div class="px-grid px-grid--2">
+        <div class="px-stage">
+          <div class="px-tabs" role="tablist" aria-label="Vistas de pedido">
+            <button class="px-tab" type="button" role="tab" aria-selected="true">Producto</button>
+            <button class="px-tab" type="button" role="tab" aria-selected="false">Cliente</button>
+            <button class="px-tab" type="button" role="tab" aria-selected="false">Entrega</button>
+          </div>
+        </div>
+        <div class="px-stage">
+          <div class="px-tabs--underline" role="tablist" aria-label="Documentación">
+            <button class="px-tab-link" type="button" role="tab" aria-selected="true">Uso</button>
+            <button class="px-tab-link" type="button" role="tab" aria-selected="false">Estados</button>
+            <button class="px-tab-link" type="button" role="tab" aria-selected="false">Accesibilidad</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-section">
+      <div class="px-section__head">
+        <h2>Botones de slider</h2>
+        <p>Usar controles circulares para avanzar o retroceder en carruseles de productos, galerías, previews y listas horizontales.</p>
+      </div>
+
+      <div class="px-slider-demo">
+        <div class="px-slider-demo__viewport" aria-label="Carrusel de productos destacados">
+          <button class="px-slider-button px-slider-button--previous" type="button" aria-label="Ver elemento anterior">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="m15 18-6-6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+
+          <article class="px-slider-card">
+            <img src="https://picsum.photos/seed/pinxel-slider-a/720/520" alt="Producto personalizado sobre una mesa">
+            <div>
+              <p>Preview de producto</p>
+              <h3>Kit corporativo personalizado</h3>
+            </div>
+          </article>
+
+          <button class="px-slider-button px-slider-button--next" type="button" aria-label="Ver siguiente elemento">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="m9 6 6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+
+        <div class="px-slider-control-row" aria-label="Estados de botones de slider">
+          <button class="px-slider-button" type="button" aria-label="Anterior">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="m15 18-6-6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <button class="px-slider-button" type="button" aria-label="Siguiente">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="m9 6 6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <button class="px-slider-button" type="button" aria-label="Anterior deshabilitado" disabled>
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="m15 18-6-6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="px-grid px-grid--3">
+        <article class="px-spec">
+          <h3>Anatomía</h3>
+          <ul class="px-list">
+            <li>Forma circular de 44px como mínimo.</li>
+            <li>Icono de flecha centrado, sin texto visible.</li>
+            <li>Usar <code>aria-label</code>: “Ver anterior” o “Ver siguiente”.</li>
+          </ul>
+        </article>
+        <article class="px-spec">
+          <h3>Estados</h3>
+          <ul class="px-list">
+            <li>Default: superficie blanca y borde suave.</li>
+            <li>Hover: elevación ligera y borde púrpura sutil.</li>
+            <li>Active: escala mínima y fondo púrpura tenue.</li>
+            <li>Focus: anillo visible de marca.</li>
+            <li>Disabled: gris suave, sin sombra ni movimiento.</li>
+          </ul>
+        </article>
+        <article class="px-spec">
+          <h3>Uso</h3>
+          <ul class="px-list">
+            <li>Ubicarlos centrados verticalmente sobre el viewport del slider.</li>
+            <li>En móvil, pueden bajar a una fila inferior si tapan contenido.</li>
+            <li>No usarlos para navegación de página; son controles de contenido local.</li>
+          </ul>
+        </article>
+      </div>
+
+      <pre class="px-code">&lt;button class="px-slider-button" type="button" aria-label="Ver siguiente elemento"&gt;
+  &lt;svg viewBox="0 0 24 24" fill="none" aria-hidden="true"&gt;...&lt;/svg&gt;
+&lt;/button&gt;</pre>
+    </section>
+        </main>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

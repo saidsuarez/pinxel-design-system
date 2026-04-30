@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Datos · UIKit Pinxel</title>
+  <link rel="stylesheet" href="../css/pinxel-uikit.css">
+  <link rel="stylesheet" href="../css/components/badges-alerts.css">
+  <link rel="stylesheet" href="../css/components/data.css">
+</head>
+<body>
+  <div class="px-shell">
+    <div class="px-layout">
+      <aside class="px-sidebar" aria-label="Navegación principal">
+        <a class="px-sidebar__brand" href="../index.html" aria-label="UIKit Pinxel">
+          <img src="../../assets/pinxel-logo.svg" alt="Pinxel">
+        </a>
+        <nav class="px-sidebar__nav" aria-label="Componentes">
+          <a href="../index.html">Inicio</a>
+          <a href="./buttons.html">Botones</a>
+          <a href="./forms.html">Formularios</a>
+          <a href="./cards.html">Tarjetas</a>
+          <a href="./badges-alerts.html">Estados</a>
+          <a href="./navigation-tabs.html">Navegación</a>
+          <a href="./data.html" aria-current="page">Datos</a>
+          <a href="./flows.html">Flujos</a>
+        </nav>
+      </aside>
+      <div class="px-layout__content">
+        <main class="px-main">
+    <section class="px-hero">
+      <p class="px-kicker">Componente</p>
+      <h1 class="px-page-title">Datos</h1>
+      <p class="px-lead">Los datos de Pinxel deben ser legibles y accionables: métricas comerciales, progreso de producción, automatizaciones y estados de pedidos.</p>
+    </section>
+
+    <section class="px-section">
+      <div class="px-section__head">
+        <h2>Métricas</h2>
+        <p>Usar números tabulares y contexto temporal para evitar lecturas ambiguas.</p>
+      </div>
+      <div class="px-grid px-grid--3">
+        <article class="px-metric-card">
+          <span class="px-metric-card__label">Pedidos personalizados</span>
+          <strong class="px-metric-card__value">128</strong>
+          <span class="px-metric-card__delta px-metric-card__delta--up">+18% esta semana</span>
+        </article>
+        <article class="px-metric-card">
+          <span class="px-metric-card__label">Leads por WhatsApp</span>
+          <strong class="px-metric-card__value">42</strong>
+          <span class="px-metric-card__delta px-metric-card__delta--up">12 nuevos hoy</span>
+        </article>
+        <article class="px-metric-card">
+          <span class="px-metric-card__label">Pendientes de diseño</span>
+          <strong class="px-metric-card__value">7</strong>
+          <span class="px-metric-card__delta px-metric-card__delta--warn">Requieren revisión</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="px-section">
+      <div class="px-grid px-grid--2">
+        <article class="px-doc-card">
+          <h3>Progreso</h3>
+          <div class="px-progress">
+            <div class="px-progress__meta"><span>Producción del pedido</span><span>72%</span></div>
+            <div class="px-progress__track"><span class="px-progress__bar" style="width:72%"></span></div>
+          </div>
+        </article>
+        <article class="px-doc-card">
+          <h3>Lista de estado</h3>
+          <div class="px-status-list">
+            <div class="px-status-row"><div><strong>Registro NFC</strong><span>Última actualización hace 8 min</span></div><span class="px-badge px-badge--success">Activo</span></div>
+            <div class="px-status-row"><div><strong>Retrato personalizado</strong><span>Esperando confirmación del cliente</span></div><span class="px-badge px-badge--warning">Pendiente</span></div>
+            <div class="px-status-row"><div><strong>Flujo WhatsApp</strong><span>Mensaje inicial publicado</span></div><span class="px-badge px-badge--info">En prueba</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+        </main>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tarjetas · UIKit Pinxel</title>
+  <link rel="stylesheet" href="../css/pinxel-uikit.css">
+  <link rel="stylesheet" href="../css/components/buttons.css">
+  <link rel="stylesheet" href="../css/components/cards.css">
+  <link rel="stylesheet" href="../css/components/badges-alerts.css">
+</head>
+<body>
+  <div class="px-shell">
+    <div class="px-layout">
+      <aside class="px-sidebar" aria-label="Navegación principal">
+        <a class="px-sidebar__brand" href="../index.html" aria-label="UIKit Pinxel">
+          <img src="../../assets/pinxel-logo.svg" alt="Pinxel">
+        </a>
+        <nav class="px-sidebar__nav" aria-label="Componentes">
+          <a href="../index.html">Inicio</a>
+          <a href="./buttons.html">Botones</a>
+          <a href="./forms.html">Formularios</a>
+          <a href="./cards.html" aria-current="page">Tarjetas</a>
+          <a href="./badges-alerts.html">Estados</a>
+          <a href="./navigation-tabs.html">Navegación</a>
+          <a href="./data.html">Datos</a>
+          <a href="./flows.html">Flujos</a>
+        </nav>
+      </aside>
+      <div class="px-layout__content">
+        <main class="px-main">
+    <section class="px-hero">
+      <p class="px-kicker">Componente</p>
+      <h1 class="px-page-title">Tarjetas</h1>
+      <p class="px-lead">Las tarjetas son superficies de trabajo y decisión. Deben organizar contenido, mostrar producto o explicar una línea interna sin convertirse en decoración excesiva.</p>
+    </section>
+
+    <section class="px-section">
+      <div class="px-section__head">
+        <h2>Base</h2>
+        <p>La tarjeta base no usa sombra por defecto. La interacción puede elevarla con moderación.</p>
+      </div>
+      <div class="px-card-demo px-card-demo--3">
+        <article class="px-card">
+          <div class="px-card__media">
+            <img src="https://picsum.photos/seed/pinxel-pet-record/640/480" alt="Producto personalizado para mascota">
+          </div>
+          <p class="px-card__eyebrow">Producto</p>
+          <h3 class="px-card__title">Registro veterinario</h3>
+          <p class="px-card__text">Organiza información clave de una mascota en formato físico, digital o híbrido.</p>
+        </article>
+        <article class="px-card px-card--interactive">
+          <div class="px-card__media">
+            <img src="https://picsum.photos/seed/pinxel-automation/640/480" alt="Automatización comercial">
+          </div>
+          <p class="px-card__eyebrow">Automatización</p>
+          <h3 class="px-card__title">Pedido por WhatsApp</h3>
+          <p class="px-card__text">Conecta WooCommerce con conversaciones comerciales y seguimiento de clientes.</p>
+        </article>
+        <article class="px-card px-card--interactive">
+          <div class="px-card__media">
+            <img src="https://picsum.photos/seed/pinxel-portrait/640/480" alt="Retrato personalizado">
+          </div>
+          <p class="px-card__eyebrow">Diseño</p>
+          <h3 class="px-card__title">Retrato personalizado</h3>
+          <p class="px-card__text">Convierte una imagen o idea en una pieza emocional para decorar o regalar.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="px-section">
+      <div class="px-section__head">
+        <h2>Producto personalizado</h2>
+        <p>Usar imagen real cuando exista. El placeholder solo sirve para prototipo.</p>
+      </div>
+      <div class="px-card-demo px-card-demo--3">
+        <article class="px-product-card">
+          <div class="px-product-card__media">
+            <img src="https://picsum.photos/seed/pinxel-notebook/640/480" alt="Libreta personalizada">
+          </div>
+          <div class="px-product-card__body">
+            <span class="px-badge px-badge--info">Personalizable</span>
+            <h3 class="px-card__title">Libreta con identidad de marca</h3>
+            <p class="px-card__text">Portada, color, nombre, dedicatoria y formato listos para configurar antes de comprar.</p>
+            <button class="px-button px-button--primary" type="button">Personalizar</button>
+          </div>
+        </article>
+        <article class="px-product-card">
+          <div class="px-product-card__media">
+            <img src="https://picsum.photos/seed/pinxel-pet-nfc/640/480" alt="Registro veterinario NFC">
+          </div>
+          <div class="px-product-card__body">
+            <span class="px-badge px-badge--success">Híbrido</span>
+            <h3 class="px-card__title">Registro veterinario NFC</h3>
+            <p class="px-card__text">Objeto físico con acceso digital para datos importantes de la mascota.</p>
+            <button class="px-button px-button--secondary" type="button">Ver flujo</button>
+          </div>
+        </article>
+        <article class="px-product-card">
+          <div class="px-product-card__media">
+            <img src="https://picsum.photos/seed/pinxel-custom-frame/640/480" alt="Cuadro personalizado">
+          </div>
+          <div class="px-product-card__body">
+            <span class="px-badge px-badge--warning">4Corners</span>
+            <h3 class="px-card__title">Cuadro personalizado</h3>
+            <p class="px-card__text">Retrato, frase o pieza visual adaptada a una historia personal.</p>
+            <button class="px-button px-button--tertiary" type="button">Ver detalles</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="px-section">
+      <div class="px-section__head">
+        <h2>Líneas internas</h2>
+        <p>Paw Studio, 4Corners y Pinxel Lab son categorías del mismo ecosistema, no marcas separadas.</p>
+      </div>
+      <div class="px-grid px-grid--3">
+        <article class="px-line-card">
+          <div class="px-line-card__mark px-line-card__mark--teal">PS</div>
+          <h3 class="px-card__title">Paw Studio</h3>
+          <p class="px-card__text">Productos y registros para mascotas con utilidad y conexión emocional.</p>
+        </article>
+        <article class="px-line-card">
+          <div class="px-line-card__mark px-line-card__mark--orange">4C</div>
+          <h3 class="px-card__title">4Corners</h3>
+          <p class="px-card__text">Cuadros y retratos personalizados para memoria, identidad y estilo.</p>
+        </article>
+        <article class="px-line-card">
+          <div class="px-line-card__mark">PL</div>
+          <h3 class="px-card__title">Pinxel Lab</h3>
+          <p class="px-card__text">Diseño, desarrollo, plugins, e-commerce y automatización con IA.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="px-section">
+      <div class="px-section__head">
+        <h2>Uso ideal en columnas</h2>
+        <p>La tarjeta no debe tener ancho fijo. El contenedor del demo limita el ancho para simular espacios reales de 2, 3 y 4 columnas.</p>
+      </div>
+      <div class="px-stage">
+        <h3>2 columnas</h3>
+        <div class="px-card-demo px-card-demo--2">
+          <article class="px-card"><div class="px-card__media"><img src="https://picsum.photos/seed/pinxel-two-a/640/480" alt="Producto personalizado"></div><p class="px-card__eyebrow">Paw Studio</p><h3 class="px-card__title">Ficha de mascota</h3><p class="px-card__text">Tarjeta en una grilla de dos columnas para espacios amplios pero enfocados.</p></article>
+          <article class="px-card"><div class="px-card__media"><img src="https://picsum.photos/seed/pinxel-two-b/640/480" alt="Producto personalizado"></div><p class="px-card__eyebrow">Pinxel Lab</p><h3 class="px-card__title">Flujo de ventas</h3><p class="px-card__text">Ideal cuando cada tarjeta necesita más lectura y acciones visibles.</p></article>
+        </div>
+      </div>
+      <div class="px-stage" style="margin-top: var(--px-space-lg)">
+        <h3>4 columnas</h3>
+        <div class="px-card-demo px-card-demo--4">
+          <article class="px-card"><div class="px-card__media"><img src="https://picsum.photos/seed/pinxel-four-a/640/480" alt="Producto personalizado"></div><p class="px-card__eyebrow">Producto</p><h3 class="px-card__title">Libreta</h3><p class="px-card__text">Card compacta para catálogo.</p></article>
+          <article class="px-card"><div class="px-card__media"><img src="https://picsum.photos/seed/pinxel-four-b/640/480" alt="Producto personalizado"></div><p class="px-card__eyebrow">Mascotas</p><h3 class="px-card__title">Registro</h3><p class="px-card__text">Card compacta para catálogo.</p></article>
+          <article class="px-card"><div class="px-card__media"><img src="https://picsum.photos/seed/pinxel-four-c/640/480" alt="Producto personalizado"></div><p class="px-card__eyebrow">Retrato</p><h3 class="px-card__title">Cuadro</h3><p class="px-card__text">Card compacta para catálogo.</p></article>
+          <article class="px-card"><div class="px-card__media"><img src="https://picsum.photos/seed/pinxel-four-d/640/480" alt="Producto personalizado"></div><p class="px-card__eyebrow">IA</p><h3 class="px-card__title">Chatbot</h3><p class="px-card__text">Card compacta para catálogo.</p></article>
+        </div>
+      </div>
+    </section>
+        </main>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

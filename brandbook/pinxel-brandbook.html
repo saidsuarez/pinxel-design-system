@@ -1,0 +1,1090 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Manual de Marca de Pinxel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --pinxel-purple: #5e4595;
+      --pinxel-purple-hover: #523b84;
+      --pinxel-orange: #f59b1b;
+      --pinxel-teal: #4ebbb8;
+      --pinxel-charcoal: #333333;
+      --color-canvas: #ffffff;
+      --color-canvas-soft: #f7f7fa;
+      --color-surface: #ffffff;
+      --color-surface-raised: #fcfcfd;
+      --color-ink: #333333;
+      --color-ink-strong: #1f1f24;
+      --color-muted: #6f6f78;
+      --color-subtle: #9a9aa3;
+      --color-hairline: #e5e5ea;
+      --color-hairline-soft: #f0f0f3;
+      --shadow-sm: 0 1px 2px rgba(31, 31, 36, .06);
+      --shadow-md: 0 12px 32px rgba(31, 31, 36, .10);
+      --radius-sm: 10px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-pill: 999px;
+      --container: 1240px;
+      --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+    }
+
+    [data-theme="dark"] {
+      --color-canvas: #121216;
+      --color-canvas-soft: #17171d;
+      --color-surface: #1b1b22;
+      --color-surface-raised: #24242c;
+      --color-ink: #f4f4f6;
+      --color-ink-strong: #ffffff;
+      --color-muted: #b8b8c2;
+      --color-subtle: #888894;
+      --color-hairline: #34343d;
+      --color-hairline-soft: #2a2a32;
+      --shadow-sm: 0 1px 2px rgba(0, 0, 0, .18);
+      --shadow-md: 0 18px 44px rgba(0, 0, 0, .34);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--color-canvas);
+      color: var(--color-ink);
+      font-family: var(--font-sans);
+      font-size: 16px;
+      line-height: 1.5;
+      letter-spacing: 0;
+    }
+
+    body.theme-transition,
+    body.theme-transition * {
+      transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+    }
+
+    img,
+    svg {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid var(--color-hairline-soft);
+      background: color-mix(in srgb, var(--color-canvas) 86%, transparent);
+      backdrop-filter: blur(18px);
+    }
+
+    .topbar-inner {
+      width: min(var(--container), calc(100% - 32px));
+      height: 72px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .brand-logo {
+      width: 136px;
+      height: auto;
+      filter: var(--logo-filter, none);
+    }
+
+    [data-theme="dark"] .brand-logo {
+      filter: invert(1) brightness(1.7);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      color: var(--color-muted);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .nav-links a {
+      padding: 9px 12px;
+      border-radius: var(--radius-pill);
+    }
+
+    .nav-links a:hover {
+      background: var(--color-canvas-soft);
+      color: var(--color-ink-strong);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .theme-toggle {
+      width: 44px;
+      height: 44px;
+      display: inline-grid;
+      place-items: center;
+      border: 1px solid var(--color-hairline);
+      border-radius: 50%;
+      color: var(--color-ink);
+      background: var(--color-surface);
+      cursor: pointer;
+    }
+
+    .theme-toggle:hover {
+      box-shadow: var(--shadow-sm);
+    }
+
+    .button {
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border: 1px solid transparent;
+      border-radius: var(--radius-pill);
+      padding: 0 22px;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1;
+      cursor: pointer;
+      transition: transform 150ms ease, background-color 150ms ease, border-color 150ms ease, box-shadow 150ms ease;
+      white-space: nowrap;
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+    }
+
+    .button:active {
+      transform: scale(.98);
+    }
+
+    .button:focus-visible,
+    .theme-toggle:focus-visible,
+    .slider-button:focus-visible,
+    .field:focus-visible {
+      outline: 3px solid rgba(94, 69, 149, .28);
+      outline-offset: 2px;
+    }
+
+    .button-primary {
+      background: var(--pinxel-purple);
+      color: #ffffff;
+    }
+
+    .button-primary:hover {
+      background: var(--pinxel-purple-hover);
+    }
+
+    .button-secondary {
+      background: var(--color-surface);
+      color: var(--color-ink);
+      border-color: var(--color-hairline);
+    }
+
+    .button-accent {
+      background: var(--pinxel-orange);
+      color: #1f1f24;
+    }
+
+    .hero {
+      width: min(var(--container), calc(100% - 32px));
+      min-height: calc(100vh - 72px);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1.02fr) minmax(320px, .98fr);
+      align-items: center;
+      gap: 56px;
+      padding: 72px 0 64px;
+    }
+
+    .eyebrow {
+      margin: 0 0 18px;
+      color: var(--pinxel-purple);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      max-width: 780px;
+      margin: 0;
+      color: var(--color-ink-strong);
+      font-size: clamp(44px, 7vw, 82px);
+      line-height: 1.02;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+
+    .hero p {
+      max-width: 620px;
+      margin: 24px 0 0;
+      color: var(--color-muted);
+      font-size: 20px;
+      line-height: 1.55;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 32px;
+    }
+
+    .hero-panel {
+      border: 1px solid var(--color-hairline);
+      border-radius: var(--radius-lg);
+      background: var(--color-surface);
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+    }
+
+    .panel-head {
+      min-height: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 0 20px;
+      border-bottom: 1px solid var(--color-hairline);
+    }
+
+    .window-dots {
+      display: flex;
+      gap: 7px;
+    }
+
+    .window-dots span {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--color-hairline);
+    }
+
+    .panel-label {
+      color: var(--color-muted);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .panel-body {
+      padding: 26px;
+    }
+
+    .product-preview {
+      display: grid;
+      gap: 18px;
+    }
+
+    .preview-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px;
+      border: 1px solid var(--color-hairline);
+      border-radius: var(--radius-pill);
+      background: var(--color-canvas-soft);
+    }
+
+    .preview-mark {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: var(--color-surface);
+      overflow: hidden;
+    }
+
+    .preview-mark img {
+      width: 24px;
+      height: 24px;
+    }
+
+    .preview-search {
+      min-width: 0;
+      flex: 1;
+      color: var(--color-subtle);
+      font-size: 14px;
+    }
+
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .metric-card {
+      min-height: 118px;
+      padding: 18px;
+      border: 1px solid var(--color-hairline);
+      border-radius: var(--radius-md);
+      background: var(--color-surface-raised);
+    }
+
+    .metric-card strong {
+      display: block;
+      color: var(--color-ink-strong);
+      font-size: 30px;
+      line-height: 1;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .metric-card span {
+      display: block;
+      margin-top: 10px;
+      color: var(--color-muted);
+      font-size: 13px;
+      line-height: 1.35;
+    }
+
+    .status-row {
+      display: grid;
+      gap: 10px;
+      padding: 18px;
+      border: 1px solid var(--color-hairline);
+      border-radius: var(--radius-md);
+      background: var(--color-canvas-soft);
+    }
+
+    .progress-line {
+      height: 10px;
+      border-radius: var(--radius-pill);
+      background: var(--color-hairline-soft);
+      overflow: hidden;
+    }
+
+    .progress-line span {
+      display: block;
+      width: 72%;
+      height: 100%;
+      border-radius: inherit;
+      background: var(--pinxel-teal);
+    }
+
+    section {
+      padding: 88px 0;
+      border-top: 1px solid var(--color-hairline-soft);
+    }
+
+    section.alt {
+      background: var(--color-canvas-soft);
+    }
+
+    .section-inner {
+      width: min(var(--container), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, .8fr) minmax(280px, .55fr);
+      gap: 48px;
+      align-items: end;
+      margin-bottom: 36px;
+    }
+
+    .section-head h2 {
+      margin: 0;
+      color: var(--color-ink-strong);
+      font-size: clamp(32px, 4vw, 48px);
+      line-height: 1.12;
+      font-weight: 700;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--color-muted);
+      font-size: 17px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .grid.cols-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .grid.cols-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .card {
+      border: 1px solid var(--color-hairline);
+      border-radius: var(--radius-md);
+      background: var(--color-surface);
+      padding: 24px;
+    }
+
+    .card h3 {
+      margin: 0;
+      color: var(--color-ink-strong);
+      font-size: 21px;
+      line-height: 1.25;
+    }
+
+    .card p {
+      margin: 12px 0 0;
+      color: var(--color-muted);
+    }
+
+    .color-card {
+      min-height: 190px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+      padding: 0;
+    }
+
+    .swatch {
+      min-height: 104px;
+    }
+
+    .swatch-info {
+      padding: 18px;
+    }
+
+    .swatch-info strong,
+    .token-name {
+      display: block;
+      color: var(--color-ink-strong);
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .swatch-info code,
+    code {
+      color: var(--color-muted);
+      font-family: var(--font-mono);
+      font-size: 13px;
+    }
+
+    .type-sample {
+      display: grid;
+      gap: 18px;
+    }
+
+    .type-row {
+      display: grid;
+      grid-template-columns: 180px minmax(0, 1fr);
+      gap: 24px;
+      align-items: baseline;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--color-hairline);
+    }
+
+    .type-row:last-child {
+      border-bottom: 0;
+    }
+
+    .type-meta {
+      color: var(--color-muted);
+      font-size: 13px;
+    }
+
+    .type-hero {
+      color: var(--color-ink-strong);
+      font-size: clamp(42px, 6vw, 56px);
+      line-height: 1.05;
+      font-weight: 700;
+    }
+
+    .type-display {
+      color: var(--color-ink-strong);
+      font-size: 40px;
+      line-height: 1.12;
+      font-weight: 700;
+    }
+
+    .type-title {
+      color: var(--color-ink-strong);
+      font-size: 24px;
+      line-height: 1.25;
+      font-weight: 700;
+    }
+
+    .type-body {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .component-stage {
+      display: grid;
+      gap: 20px;
+    }
+
+    .component-row {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .slider-button {
+      width: 44px;
+      height: 44px;
+      display: inline-grid;
+      place-items: center;
+      border: 1px solid var(--color-hairline);
+      border-radius: 50%;
+      background: var(--color-surface);
+      color: var(--color-ink);
+      box-shadow: var(--shadow-sm);
+      cursor: pointer;
+      transition: transform 150ms ease, border-color 150ms ease, box-shadow 150ms ease, background-color 150ms ease, color 150ms ease;
+    }
+
+    .slider-button:hover:not(:disabled) {
+      transform: translateY(-1px);
+      border-color: color-mix(in srgb, var(--pinxel-purple) 36%, var(--color-hairline));
+      box-shadow: var(--shadow-md);
+    }
+
+    .slider-button:active:not(:disabled) {
+      transform: scale(.96);
+      background: rgba(94, 69, 149, .09);
+      color: var(--pinxel-purple);
+    }
+
+    .slider-button:disabled {
+      background: var(--color-canvas-soft);
+      color: var(--color-subtle);
+      box-shadow: none;
+      cursor: not-allowed;
+    }
+
+    .slider-button svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .field {
+      width: min(100%, 360px);
+      min-height: 48px;
+      border: 1px solid var(--color-hairline);
+      border-radius: var(--radius-pill);
+      background: var(--color-surface);
+      color: var(--color-ink);
+      padding: 0 18px;
+    }
+
+    .badge {
+      width: fit-content;
+      justify-self: start;
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      border-radius: var(--radius-pill);
+      padding: 0 11px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .badge-purple {
+      background: rgba(94, 69, 149, .14);
+      color: var(--pinxel-purple);
+    }
+
+    .badge-teal {
+      background: rgba(78, 187, 184, .18);
+      color: color-mix(in srgb, var(--pinxel-teal) 68%, var(--color-ink-strong));
+    }
+
+    .badge-orange {
+      background: rgba(245, 155, 27, .18);
+      color: color-mix(in srgb, var(--pinxel-orange) 70%, var(--color-ink-strong));
+    }
+
+    .spec-table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border: 1px solid var(--color-hairline);
+      border-radius: var(--radius-md);
+      background: var(--color-surface);
+    }
+
+    .spec-table th,
+    .spec-table td {
+      padding: 15px 18px;
+      border-bottom: 1px solid var(--color-hairline);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .spec-table tr:last-child th,
+    .spec-table tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .spec-table th {
+      width: 28%;
+      color: var(--color-ink-strong);
+      font-size: 14px;
+    }
+
+    .spec-table td {
+      color: var(--color-muted);
+      font-size: 14px;
+    }
+
+    .logo-stage {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 18px;
+    }
+
+    .logo-box {
+      min-height: 230px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--color-hairline);
+      border-radius: var(--radius-md);
+      background: var(--color-surface);
+      padding: 32px;
+    }
+
+    .logo-box img.logo-horizontal {
+      width: min(280px, 80%);
+    }
+
+    .logo-box img.logo-symbol {
+      width: 112px;
+    }
+
+    [data-theme="dark"] .logo-box img.logo-horizontal {
+      filter: invert(1) brightness(1.7);
+    }
+
+    .footer {
+      padding: 56px 0;
+      background: var(--color-canvas-soft);
+      border-top: 1px solid var(--color-hairline-soft);
+    }
+
+    .footer-inner {
+      width: min(var(--container), calc(100% - 32px));
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      color: var(--color-muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 960px) {
+      .hero,
+      .section-head,
+      .logo-stage {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 48px;
+      }
+
+      .grid.cols-3,
+      .grid.cols-2 {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .topbar-inner {
+        height: 64px;
+      }
+
+      .brand-logo {
+        width: 112px;
+      }
+
+      .nav-actions .button {
+        display: none;
+      }
+
+      .hero {
+        min-height: auto;
+        gap: 36px;
+      }
+
+      .hero h1 {
+        font-size: 43px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+
+      section {
+        padding: 64px 0;
+      }
+
+      .metric-grid,
+      .type-row {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#top" aria-label="Manual de Marca de Pinxel">
+        <img class="brand-logo" src="../assets/pinxel-logo.svg" alt="Pinxel">
+      </a>
+      <nav class="nav-links" aria-label="Secciones">
+        <a href="#essence">Esencia</a>
+        <a href="#color">Color</a>
+        <a href="#type">Tipografía</a>
+        <a href="#components">Componentes</a>
+        <a href="#tokens">Tokens</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle" type="button" aria-label="Cambiar tema" id="themeToggle">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 3v2.2M12 18.8V21M3 12h2.2M18.8 12H21M5.64 5.64 7.2 7.2M16.8 16.8l1.56 1.56M18.36 5.64 16.8 7.2M7.2 16.8l-1.56 1.56" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </button>
+        <a class="button button-primary" href="#components">Ver sistema</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <div class="hero">
+      <div>
+        <p class="eyebrow">Sistema de Diseño Pinxel</p>
+        <h1>Personalización precisa.</h1>
+        <p>Una marca limpia para productos personalizados, soluciones digitales y automatización con IA, con identidad, tokens y componentes web/app basados en mucho aire, acciones redondeadas y color usado con intención.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#color">Explorar identidad</a>
+          <a class="button button-secondary" href="./pinxel-brandbook.md">Abrir Markdown</a>
+        </div>
+      </div>
+
+      <aside class="hero-panel" aria-label="Vista previa de producto Pinxel">
+        <div class="panel-head">
+          <div class="window-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+          <span class="panel-label">Tema claro predeterminado</span>
+        </div>
+        <div class="panel-body">
+          <div class="product-preview">
+            <div class="preview-nav">
+              <span class="preview-mark"><img src="../assets/pinxel-isotipo.svg" alt=""></span>
+              <span class="preview-search">Buscar proyectos, equipos o tareas</span>
+              <button class="button button-primary" type="button">Crear</button>
+            </div>
+            <div class="metric-grid">
+              <div class="metric-card">
+                <strong>92%</strong>
+                <span>Consistencia de interfaz</span>
+              </div>
+              <div class="metric-card">
+                <strong>18</strong>
+                <span>Tokens base</span>
+              </div>
+              <div class="metric-card">
+                <strong>4</strong>
+                <span>Colores núcleo</span>
+              </div>
+            </div>
+            <div class="status-row">
+              <div class="component-row">
+                <span class="badge badge-purple">Sistema</span>
+                <span class="badge badge-teal">Activo</span>
+                <span class="badge badge-orange">Revisión</span>
+              </div>
+              <div class="progress-line" aria-label="Progreso visual"><span></span></div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <section id="essence" class="alt">
+      <div class="section-inner">
+        <div class="section-head">
+          <h2>Esencia de marca</h2>
+          <p>Pinxel debe sentirse como un ecosistema premium: claro, modular, humano y listo para convertir ideas en productos reales.</p>
+        </div>
+        <div class="grid cols-3">
+          <article class="card">
+            <h3>Clara</h3>
+            <p>Reduce el ruido visual y verbal. Cada pantalla debe explicar qué está pasando y cuál es el siguiente paso.</p>
+          </article>
+          <article class="card">
+            <h3>Precisa</h3>
+            <p>La interfaz no decora decisiones. Usa jerarquía, espaciado y estados para orientar con exactitud.</p>
+          </article>
+          <article class="card">
+            <h3>Optimista</h3>
+            <p>El color aparece como energía medida: púrpura para dirección, naranja para impulso y turquesa para avance.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="logo">
+      <div class="section-inner">
+        <div class="section-head">
+          <h2>Logo</h2>
+          <p>La firma principal vive limpia y sin efectos. El isotipo funciona como módulo de app, favicon y marca compacta.</p>
+        </div>
+        <div class="logo-stage">
+          <div class="logo-box">
+            <img class="logo-horizontal" src="../assets/pinxel-logo.svg" alt="Pinxel logo">
+          </div>
+          <div class="logo-box">
+            <img class="logo-symbol" src="../assets/pinxel-isotipo.svg" alt="Pinxel isotipo">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="color" class="alt">
+      <div class="section-inner">
+        <div class="section-head">
+          <h2>Color</h2>
+          <p>El sistema es light-first. Los acentos son potentes, pero se usan en dosis pequeñas para mantener elegancia y foco.</p>
+        </div>
+        <div class="grid cols-3">
+          <article class="card color-card">
+            <div class="swatch" style="background:#5e4595"></div>
+            <div class="swatch-info"><strong>Púrpura Pinxel</strong><code>#5E4595 · primary</code></div>
+          </article>
+          <article class="card color-card">
+            <div class="swatch" style="background:#f59b1b"></div>
+            <div class="swatch-info"><strong>Naranja Energía</strong><code>#F59B1B · accent</code></div>
+          </article>
+          <article class="card color-card">
+            <div class="swatch" style="background:#4ebbb8"></div>
+            <div class="swatch-info"><strong>Turquesa Vivo</strong><code>#4EBBB8 · success</code></div>
+          </article>
+          <article class="card color-card">
+            <div class="swatch" style="background:#333333"></div>
+            <div class="swatch-info"><strong>Gris Carbón</strong><code>#333333 · ink</code></div>
+          </article>
+          <article class="card color-card">
+            <div class="swatch" style="background:#f7f7fa"></div>
+            <div class="swatch-info"><strong>Canvas Soft</strong><code>#F7F7FA · background</code></div>
+          </article>
+          <article class="card color-card">
+            <div class="swatch" style="background:#121216"></div>
+            <div class="swatch-info"><strong>Canvas Oscuro</strong><code>#121216 · opcional</code></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="type">
+      <div class="section-inner">
+        <div class="section-head">
+          <h2>Tipografía</h2>
+          <p>Inter como fuente principal, con pesos firmes y lectura cómoda. La marca se apoya más en ritmo que en adornos.</p>
+        </div>
+        <div class="card type-sample">
+          <div class="type-row">
+            <div class="type-meta">Hero · 56/1.05 · 800</div>
+            <div class="type-hero">Diseña con menos ruido.</div>
+          </div>
+          <div class="type-row">
+            <div class="type-meta">Display · 40/1.12 · 700</div>
+            <div class="type-display">Componentes para producto y web.</div>
+          </div>
+          <div class="type-row">
+            <div class="type-meta">Título · 24/1.25 · 700</div>
+            <div class="type-title">Una jerarquía sobria, legible y escalable.</div>
+          </div>
+          <div class="type-row">
+            <div class="type-meta">Cuerpo · 16/1.5 · 400</div>
+            <div class="type-body">Pinxel usa textos claros, acciones visibles y estados completos para que cada flujo se sienta natural.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="components" class="alt">
+      <div class="section-inner">
+        <div class="section-head">
+          <h2>Componentes</h2>
+          <p>La base visual prioriza píldoras, bordes finos, estados claros y superficies útiles para personalización, comercio y producto digital.</p>
+        </div>
+        <div class="grid cols-2">
+          <article class="card component-stage">
+            <h3>Botones</h3>
+            <div class="component-row">
+              <button class="button button-primary" type="button">Primario</button>
+              <button class="button button-secondary" type="button">Secundario</button>
+              <button class="button button-accent" type="button">Acento</button>
+            </div>
+            <p>El CTA principal siempre es pill y púrpura. El naranja aparece cuando la acción necesita empuje comercial.</p>
+          </article>
+          <article class="card component-stage">
+            <h3>Campos</h3>
+            <input class="field" type="text" placeholder="Buscar en Pinxel">
+            <p>Búsqueda y campos principales usan forma pill. Formularios densos pueden bajar a radio 10px.</p>
+          </article>
+          <article class="card component-stage">
+            <h3>Insignias</h3>
+            <div class="component-row">
+              <span class="badge badge-purple">Info</span>
+              <span class="badge badge-teal">Activo</span>
+              <span class="badge badge-orange">Pendiente</span>
+            </div>
+            <p>Las insignias comunican estado con color y texto. Nunca deben depender solo del color.</p>
+          </article>
+          <article class="card component-stage">
+            <h3>Tarjetas</h3>
+            <div class="metric-grid">
+              <div class="metric-card"><strong>24px</strong><span>Espaciado interno base</span></div>
+              <div class="metric-card"><strong>16px</strong><span>Radio de tarjeta</span></div>
+              <div class="metric-card"><strong>1px</strong><span>Borde hairline</span></div>
+            </div>
+            <p>Las tarjetas son superficies de trabajo. Evitar tarjetas dentro de tarjetas.</p>
+          </article>
+          <article class="card component-stage">
+            <h3>Navegación de sliders</h3>
+            <div class="component-row">
+              <button class="slider-button" type="button" aria-label="Ver anterior">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="m15 18-6-6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button class="slider-button" type="button" aria-label="Ver siguiente">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="m9 6 6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button class="slider-button" type="button" aria-label="Ver anterior deshabilitado" disabled>
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="m15 18-6-6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+            <p>Controles circulares de 44px para carruseles, galerías y previews. Siempre llevan aria-label, foco visible y estado deshabilitado.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="tokens">
+      <div class="section-inner">
+        <div class="section-head">
+          <h2>Tokens base</h2>
+          <p>Una primera estructura lista para llevar a CSS, variables de Figma o un paquete de tokens de diseño.</p>
+        </div>
+        <table class="spec-table">
+          <tbody>
+            <tr>
+              <th>Color</th>
+              <td><code>--pinxel-purple</code>, <code>--pinxel-orange</code>, <code>--pinxel-teal</code>, <code>--pinxel-charcoal</code></td>
+            </tr>
+            <tr>
+              <th>Superficie</th>
+              <td><code>--color-canvas</code>, <code>--color-canvas-soft</code>, <code>--color-surface</code>, <code>--color-hairline</code></td>
+            </tr>
+            <tr>
+              <th>Radio</th>
+              <td><code>--radius-sm: 10px</code>, <code>--radius-md: 16px</code>, <code>--radius-lg: 24px</code>, <code>--radius-pill: 999px</code></td>
+            </tr>
+            <tr>
+              <th>Tipografía</th>
+              <td><code>Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif</code></td>
+            </tr>
+            <tr>
+              <th>Movimiento</th>
+              <td><code>120ms</code> para presión, <code>180ms</code> para hover/focus, <code>260ms</code> para modales y paneles.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>Manual de Marca de Pinxel · base v0.1</span>
+      <span>Tema claro primero · modo oscuro opcional · componentes web/app</span>
+    </div>
+  </footer>
+
+  <script>
+    const root = document.documentElement;
+    const toggle = document.getElementById('themeToggle');
+    const savedTheme = localStorage.getItem('pinxel-theme');
+
+    if (savedTheme) {
+      root.dataset.theme = savedTheme;
+    }
+
+    toggle.addEventListener('click', () => {
+      document.body.classList.add('theme-transition');
+      const nextTheme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+      root.dataset.theme = nextTheme;
+      localStorage.setItem('pinxel-theme', nextTheme);
+      window.setTimeout(() => document.body.classList.remove('theme-transition'), 220);
+    });
+  </script>
+</body>
+</html>

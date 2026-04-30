@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UIKit Pinxel</title>
+  <link rel="stylesheet" href="./css/pinxel-uikit.css">
+  <link rel="stylesheet" href="./css/components/buttons.css">
+  <link rel="stylesheet" href="./css/components/forms.css">
+  <link rel="stylesheet" href="./css/components/cards.css">
+  <link rel="stylesheet" href="./css/components/badges-alerts.css">
+  <link rel="stylesheet" href="./css/components/navigation.css">
+  <link rel="stylesheet" href="./css/components/tabs.css">
+  <link rel="stylesheet" href="./css/components/data.css">
+  <link rel="stylesheet" href="./css/components/flows.css">
+</head>
+<body>
+  <div class="px-shell">
+    <div class="px-layout">
+      <aside class="px-sidebar" aria-label="Navegación principal">
+        <a class="px-sidebar__brand" href="./index.html" aria-label="UIKit Pinxel">
+          <img src="../assets/pinxel-logo.svg" alt="Pinxel">
+        </a>
+        <nav class="px-sidebar__nav" aria-label="Componentes">
+          <a href="./index.html" aria-current="page">Inicio</a>
+          <a href="./components/buttons.html">Botones</a>
+          <a href="./components/forms.html">Formularios</a>
+          <a href="./components/cards.html">Tarjetas</a>
+          <a href="./components/badges-alerts.html">Estados</a>
+          <a href="./components/navigation-tabs.html">Navegación</a>
+          <a href="./components/data.html">Datos</a>
+          <a href="./components/flows.html">Flujos</a>
+        </nav>
+      </aside>
+      <div class="px-layout__content">
+        <main class="px-main">
+      <section class="px-hero">
+        <p class="px-kicker">Pinxel UIKit</p>
+        <h1 class="px-page-title">Componentes base para personalización, comercio y producto digital.</h1>
+        <p class="px-lead">Este UIKit traduce el brandbook de Pinxel en componentes HTML/CSS listos para documentar, prototipar y alimentar futuras interfaces. El CSS global contiene tokens y fundamentos; cada componente tiene su propia hoja de estilos.</p>
+        <div class="px-row">
+          <a class="px-button px-button--primary" href="./components/buttons.html">Explorar componentes</a>
+          <a class="px-button px-button--secondary" href="../brandbook/pinxel-brandbook.md">Abrir brandbook AI</a>
+        </div>
+      </section>
+
+      <section class="px-section">
+        <div class="px-section__head">
+          <h2>Arquitectura</h2>
+          <p>La estructura separa fundamentos de especificaciones para que cada componente pueda crecer sin contaminar el sistema completo.</p>
+        </div>
+        <div class="px-grid px-grid--3">
+          <article class="px-doc-card">
+            <h3>CSS global</h3>
+            <p><code>uikit/css/pinxel-uikit.css</code> define tokens, layout documental, tipografía, grillas, tablas, stages y utilidades base.</p>
+          </article>
+          <article class="px-doc-card">
+            <h3>CSS por componente</h3>
+            <p><code>uikit/css/components/*.css</code> contiene especificaciones independientes para botones, formularios, tarjetas, estados, navegación, datos y flujos.</p>
+          </article>
+          <article class="px-doc-card">
+            <h3>HTML independiente</h3>
+            <p><code>uikit/components/*.html</code> documenta cada componente con anatomía, uso, estados y ejemplos de implementación.</p>
+          </article>
+          <article class="px-doc-card">
+            <h3>Instrucciones para IA</h3>
+            <p><code>ai/pinxel-ui-instructions.md</code> define las reglas operativas que debe seguir cualquier agente antes de generar UI.</p>
+          </article>
+          <article class="px-doc-card">
+            <h3>Registro de componentes</h3>
+            <p><code>uikit/component-registry.md</code> indica qué archivos consultar según el componente o patrón que se necesite crear.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="px-section">
+        <div class="px-section__head">
+          <h2>Prompt recomendado</h2>
+          <p>Copia este prompt cuando pidas una interfaz, producto digital, landing, dashboard o flujo para Pinxel. Ajusta solamente la última línea con el pedido específico.</p>
+        </div>
+        <textarea class="px-prompt-box" readonly spellcheck="false">Use the Pinxel design system as the source of truth.
+
+Before designing or coding, read and follow:
+- brandbook/pinxel-brandbook.md
+- about/about-pinxel.md
+- ai/pinxel-ui-instructions.md
+- uikit/component-registry.md
+- uikit/index.html
+- uikit/css/pinxel-uikit.css
+- the relevant files in uikit/components/ and uikit/css/components/
+
+Build the requested UI using existing Pinxel tokens, layout rules, components, states, spacing, typography, accessibility rules, and content tone.
+
+Do not invent new visual patterns unless the existing UIKit does not cover the need.
+Use light theme by default.
+Use Inter.
+Use purple #5E4595 for primary actions, orange #F59B1B for commercial emphasis, teal #4EBBB8 for progress/success/live states, and charcoal #333333 for text and structure.
+Use pill buttons, visible focus, labeled form fields, aligned inputs/selects, accessible icon-only controls, and complete component states.
+
+Request:
+[Describe the Pinxel product, page, app screen, component, or user flow to generate.]</textarea>
+      </section>
+
+      <section class="px-section">
+        <div class="px-section__head">
+          <h2>Principios del UIKit</h2>
+          <p>Pinxel debe sentirse claro y modular, pero también capaz de sostener productos físicos personalizados y automatizaciones con IA.</p>
+        </div>
+        <table class="px-table">
+          <tbody>
+            <tr>
+              <th>Light first</th>
+              <td>Diseñar primero sobre superficies blancas o gris muy claro. El modo oscuro es opcional para herramientas largas y dashboards.</td>
+            </tr>
+            <tr>
+              <th>Pill actions</th>
+              <td>Las acciones principales usan forma pill. Es una señal de marca: acción amable, táctil y clara.</td>
+            </tr>
+            <tr>
+              <th>Color funcional</th>
+              <td>Púrpura para decisiones, naranja para impulso comercial, turquesa para progreso y estados positivos.</td>
+            </tr>
+            <tr>
+              <th>Personalización visible</th>
+              <td>Los flujos de producto deben mostrar objeto, opciones, preview, datos del cliente y confirmación.</td>
+            </tr>
+            <tr>
+              <th>IA práctica</th>
+              <td>La IA se presenta como asistente útil. Mostrar flujo, mensaje, estado o resultado antes que gráficos abstractos.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="px-section">
+        <div class="px-section__head">
+          <h2>Componentes base</h2>
+          <p>Estos son los primeros componentes estables. Cada página puede copiarse como referencia para nuevos patrones.</p>
+        </div>
+        <div class="px-grid px-grid--3">
+          <a class="px-card px-card--interactive" href="./components/buttons.html">
+            <p class="px-card__eyebrow">Acciones</p>
+            <h3 class="px-card__title">Botones</h3>
+            <p class="px-card__text">Primario, secundario, terciario, acento, icon button, tamaños y estados.</p>
+          </a>
+          <a class="px-card px-card--interactive" href="./components/forms.html">
+            <p class="px-card__eyebrow">Entrada</p>
+            <h3 class="px-card__title">Formularios</h3>
+            <p class="px-card__text">Inputs, búsqueda, textarea, selects, choices y opciones de personalización.</p>
+          </a>
+          <a class="px-card px-card--interactive" href="./components/cards.html">
+            <p class="px-card__eyebrow">Superficies</p>
+            <h3 class="px-card__title">Tarjetas</h3>
+            <p class="px-card__text">Cards base, producto personalizado y líneas internas de Pinxel.</p>
+          </a>
+          <a class="px-card px-card--interactive" href="./components/badges-alerts.html">
+            <p class="px-card__eyebrow">Feedback</p>
+            <h3 class="px-card__title">Estados</h3>
+            <p class="px-card__text">Badges y alertas para información, éxito, advertencia, error y neutral.</p>
+          </a>
+          <a class="px-card px-card--interactive" href="./components/navigation-tabs.html">
+            <p class="px-card__eyebrow">Orientación</p>
+            <h3 class="px-card__title">Navegación y tabs</h3>
+            <p class="px-card__text">Top nav, subbar, tabs pill y tabs subrayados.</p>
+          </a>
+          <a class="px-card px-card--interactive" href="./components/data.html">
+            <p class="px-card__eyebrow">Producto</p>
+            <h3 class="px-card__title">Datos</h3>
+            <p class="px-card__text">Métricas, progreso y listas de estados para dashboards y automatización.</p>
+          </a>
+          <a class="px-card px-card--interactive" href="./components/flows.html">
+            <p class="px-card__eyebrow">Experiencia</p>
+            <h3 class="px-card__title">Flujos</h3>
+            <p class="px-card__text">Personalización de producto y automatización comercial con IA.</p>
+          </a>
+        </div>
+      </section>
+
+      <section class="px-section">
+        <div class="px-section__head">
+          <h2>Tokens esenciales</h2>
+          <p>Primer mapa de valores compartidos entre brandbook, UIKit e interfaces futuras.</p>
+        </div>
+        <div class="px-grid px-grid--3">
+          <div class="px-doc-card">
+            <div class="px-token-swatch" style="background:#5e4595"></div>
+            <h3>Púrpura Pinxel</h3>
+            <p><code>--px-purple: #5e4595</code></p>
+          </div>
+          <div class="px-doc-card">
+            <div class="px-token-swatch" style="background:#f59b1b"></div>
+            <h3>Naranja Energía</h3>
+            <p><code>--px-orange: #f59b1b</code></p>
+          </div>
+          <div class="px-doc-card">
+            <div class="px-token-swatch" style="background:#4ebbb8"></div>
+            <h3>Turquesa Vivo</h3>
+            <p><code>--px-teal: #4ebbb8</code></p>
+          </div>
+        </div>
+      </section>
+        </main>
+
+        <footer class="px-footer">
+          <div class="px-footer__inner">UIKit Pinxel · base v0.1 · HTML estático con CSS modular.</div>
+        </footer>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

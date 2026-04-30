@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flujos · UIKit Pinxel</title>
+  <link rel="stylesheet" href="../css/pinxel-uikit.css">
+  <link rel="stylesheet" href="../css/components/buttons.css">
+  <link rel="stylesheet" href="../css/components/badges-alerts.css">
+  <link rel="stylesheet" href="../css/components/flows.css">
+</head>
+<body>
+  <div class="px-shell">
+    <div class="px-layout">
+      <aside class="px-sidebar" aria-label="Navegación principal">
+        <a class="px-sidebar__brand" href="../index.html" aria-label="UIKit Pinxel">
+          <img src="../../assets/pinxel-logo.svg" alt="Pinxel">
+        </a>
+        <nav class="px-sidebar__nav" aria-label="Componentes">
+          <a href="../index.html">Inicio</a>
+          <a href="./buttons.html">Botones</a>
+          <a href="./forms.html">Formularios</a>
+          <a href="./cards.html">Tarjetas</a>
+          <a href="./badges-alerts.html">Estados</a>
+          <a href="./navigation-tabs.html">Navegación</a>
+          <a href="./data.html">Datos</a>
+          <a href="./flows.html" aria-current="page">Flujos</a>
+        </nav>
+      </aside>
+      <div class="px-layout__content">
+        <main class="px-main">
+    <section class="px-hero">
+      <p class="px-kicker">Patrones</p>
+      <h1 class="px-page-title">Flujos de personalización e IA</h1>
+      <p class="px-lead">Pinxel no solo vende objetos: ayuda al cliente a participar en la creación y usa tecnología para automatizar ventas de forma clara y humana.</p>
+    </section>
+
+    <section class="px-section">
+      <div class="px-section__head">
+        <h2>Personalización</h2>
+        <p>El cliente debe ver en qué paso está y qué decisión está tomando.</p>
+      </div>
+      <div class="px-grid px-grid--2">
+        <div class="px-stepper">
+          <div class="px-step"><span class="px-step__number">1</span><div><strong class="px-step__title">Elegir producto</strong><p class="px-step__text">Libreta, registro veterinario, retrato o producto digital.</p></div></div>
+          <div class="px-step"><span class="px-step__number">2</span><div><strong class="px-step__title">Configurar opciones</strong><p class="px-step__text">Color, formato, nombre, imagen, estilo o datos especiales.</p></div></div>
+          <div class="px-step"><span class="px-step__number">3</span><div><strong class="px-step__title">Revisar preview</strong><p class="px-step__text">Confirmar que la pieza se siente propia antes de continuar.</p></div></div>
+          <div class="px-step"><span class="px-step__number">4</span><div><strong class="px-step__title">Enviar o comprar</strong><p class="px-step__text">Finalizar por e-commerce, WhatsApp o flujo híbrido.</p></div></div>
+        </div>
+        <div class="px-preview-panel">
+          <div class="px-preview-panel__canvas">
+            <div class="px-preview-panel__object">MILO</div>
+          </div>
+          <span class="px-badge px-badge--info">Preview de registro</span>
+          <button class="px-button px-button--primary" type="button">Confirmar diseño</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-section">
+      <div class="px-section__head">
+        <h2>Automatización con IA</h2>
+        <p>La IA debe mostrarse como flujo controlable: qué hará, cuándo actuará y cuál es el próximo paso.</p>
+      </div>
+      <article class="px-automation-card">
+        <div class="px-automation-card__header">
+          <h3 class="px-automation-card__title">Seguimiento de lead por WhatsApp</h3>
+          <span class="px-badge px-badge--success">Activo</span>
+        </div>
+        <div class="px-message">
+          <strong>Mensaje inicial</strong>
+          Hola, vi que te interesa personalizar un registro para tu mascota. ¿Quieres que te ayude a elegir formato físico, digital o híbrido?
+        </div>
+        <div class="px-message">
+          <strong>Regla</strong>
+          Si el cliente no responde en 24 horas, enviar recordatorio amable con preview del producto.
+        </div>
+        <div class="px-row">
+          <button class="px-button px-button--primary" type="button">Editar flujo</button>
+          <button class="px-button px-button--secondary" type="button">Ver historial</button>
+        </div>
+      </article>
+    </section>
+        </main>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

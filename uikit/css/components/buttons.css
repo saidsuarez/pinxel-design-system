@@ -1,0 +1,254 @@
+.px-button {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid transparent;
+  border-radius: var(--px-radius-pill);
+  padding: 0 22px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  transition: transform 160ms var(--px-ease), background-color 160ms var(--px-ease), border-color 160ms var(--px-ease), box-shadow 160ms var(--px-ease), color 160ms var(--px-ease), opacity 160ms var(--px-ease);
+  white-space: nowrap;
+}
+
+.px-button:hover:not(:disabled):not([aria-disabled="true"]):not([aria-busy="true"]) {
+  transform: translateY(-1px);
+}
+
+.px-button:active:not(:disabled):not([aria-disabled="true"]):not([aria-busy="true"]),
+.px-button[aria-pressed="true"] {
+  transform: scale(.98);
+}
+
+.px-button:focus-visible,
+.px-icon-button:focus-visible {
+  outline: 3px solid rgba(94, 69, 149, .28);
+  outline-offset: 3px;
+}
+
+.px-button:disabled,
+.px-button[aria-disabled="true"] {
+  cursor: not-allowed;
+  transform: none;
+}
+
+.px-button[aria-busy="true"] {
+  cursor: progress;
+  pointer-events: none;
+}
+
+.px-button[aria-busy="true"]::before {
+  width: 14px;
+  height: 14px;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: var(--px-radius-full);
+  content: "";
+  animation: px-button-spin 700ms linear infinite;
+}
+
+.px-button--primary {
+  background: var(--px-purple);
+  color: #ffffff;
+}
+
+.px-button--primary:hover:not(:disabled):not([aria-disabled="true"]) {
+  background: var(--px-purple-hover);
+}
+
+.px-button--primary:active:not(:disabled):not([aria-disabled="true"]),
+.px-button--primary[aria-pressed="true"] {
+  background: #493176;
+}
+
+.px-button--primary:disabled,
+.px-button--primary[aria-disabled="true"] {
+  background: #d8d1e7;
+  color: #ffffff;
+}
+
+.px-button--secondary {
+  border-color: var(--px-hairline);
+  background: var(--px-surface);
+  color: var(--px-ink);
+}
+
+.px-button--secondary:hover:not(:disabled):not([aria-disabled="true"]) {
+  border-color: color-mix(in srgb, var(--px-purple) 36%, var(--px-hairline));
+  box-shadow: var(--px-shadow-sm);
+}
+
+.px-button--secondary:active:not(:disabled):not([aria-disabled="true"]),
+.px-button--secondary[aria-pressed="true"] {
+  background: rgba(94, 69, 149, .08);
+  border-color: rgba(94, 69, 149, .42);
+}
+
+.px-button--secondary:disabled,
+.px-button--secondary[aria-disabled="true"] {
+  background: var(--px-canvas-soft);
+  color: var(--px-subtle);
+  border-color: var(--px-hairline);
+}
+
+.px-button--accent {
+  background: var(--px-orange);
+  color: #1f1f24;
+}
+
+.px-button--accent:hover:not(:disabled):not([aria-disabled="true"]) {
+  background: #df8810;
+}
+
+.px-button--accent:disabled,
+.px-button--accent[aria-disabled="true"] {
+  background: #f8d9a7;
+  color: rgba(31, 31, 36, .56);
+}
+
+.px-button--tertiary,
+.px-button--ghost {
+  background: transparent;
+  color: var(--px-purple);
+  padding-inline: 14px;
+}
+
+.px-button--tertiary:hover:not(:disabled):not([aria-disabled="true"]),
+.px-button--ghost:hover:not(:disabled):not([aria-disabled="true"]) {
+  background: rgba(94, 69, 149, .09);
+}
+
+.px-button--tertiary:active:not(:disabled):not([aria-disabled="true"]),
+.px-button--tertiary[aria-pressed="true"],
+.px-button--ghost:active:not(:disabled):not([aria-disabled="true"]),
+.px-button--ghost[aria-pressed="true"] {
+  background: rgba(94, 69, 149, .14);
+}
+
+.px-button--tertiary:disabled,
+.px-button--tertiary[aria-disabled="true"],
+.px-button--ghost:disabled,
+.px-button--ghost[aria-disabled="true"] {
+  color: var(--px-subtle);
+  background: transparent;
+}
+
+.px-button--tertiary-neutral {
+  color: var(--px-ink);
+}
+
+.px-button--tertiary-danger {
+  color: var(--px-error);
+}
+
+.px-button--tertiary-danger:hover:not(:disabled):not([aria-disabled="true"]) {
+  background: rgba(217, 74, 74, .10);
+}
+
+.px-button--large {
+  min-height: 52px;
+  padding: 0 28px;
+  font-size: 16px;
+}
+
+.px-button--small {
+  min-height: 36px;
+  padding: 0 16px;
+  font-size: 14px;
+}
+
+.px-button--full {
+  width: 100%;
+}
+
+.px-icon-button {
+  width: 44px;
+  height: 44px;
+  display: inline-grid;
+  place-items: center;
+  border: 1px solid var(--px-hairline);
+  border-radius: var(--px-radius-full);
+  background: var(--px-surface);
+  color: var(--px-ink);
+  cursor: pointer;
+  transition: transform 160ms var(--px-ease), box-shadow 160ms var(--px-ease), border-color 160ms var(--px-ease), background-color 160ms var(--px-ease), color 160ms var(--px-ease);
+}
+
+.px-icon-button:hover:not(:disabled):not([aria-disabled="true"]) {
+  transform: translateY(-1px);
+  border-color: color-mix(in srgb, var(--px-purple) 36%, var(--px-hairline));
+  box-shadow: var(--px-shadow-sm);
+}
+
+.px-icon-button:active:not(:disabled):not([aria-disabled="true"]),
+.px-icon-button[aria-pressed="true"] {
+  transform: scale(.96);
+  background: rgba(94, 69, 149, .09);
+  color: var(--px-purple);
+}
+
+.px-icon-button:disabled,
+.px-icon-button[aria-disabled="true"] {
+  cursor: not-allowed;
+  background: var(--px-canvas-soft);
+  color: var(--px-subtle);
+  transform: none;
+}
+
+.px-icon-button svg,
+.px-button svg {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+}
+
+.px-button-state-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(150px, 1fr));
+  gap: var(--px-space-md);
+}
+
+.px-button-state {
+  display: grid;
+  gap: var(--px-space-sm);
+  align-content: start;
+  border: 1px solid var(--px-hairline);
+  border-radius: var(--px-radius-md);
+  background: var(--px-surface);
+  padding: var(--px-space-md);
+}
+
+.px-button-state span {
+  color: var(--px-muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.px-button-demo-focus {
+  outline: 3px solid rgba(94, 69, 149, .28);
+  outline-offset: 3px;
+}
+
+@keyframes px-button-spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@media (max-width: 1040px) {
+  .px-button-state-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .px-button-state-grid {
+    grid-template-columns: 1fr;
+  }
+}

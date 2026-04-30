@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Botones · UIKit Pinxel</title>
+  <link rel="stylesheet" href="../css/pinxel-uikit.css">
+  <link rel="stylesheet" href="../css/components/buttons.css">
+</head>
+<body>
+  <div class="px-shell">
+    <div class="px-layout">
+      <aside class="px-sidebar" aria-label="Navegación principal">
+        <a class="px-sidebar__brand" href="../index.html" aria-label="UIKit Pinxel">
+          <img src="../../assets/pinxel-logo.svg" alt="Pinxel">
+        </a>
+        <nav class="px-sidebar__nav" aria-label="Componentes">
+          <a href="../index.html">Inicio</a>
+          <a href="./buttons.html" aria-current="page">Botones</a>
+          <a href="./forms.html">Formularios</a>
+          <a href="./cards.html">Tarjetas</a>
+          <a href="./badges-alerts.html">Estados</a>
+          <a href="./navigation-tabs.html">Navegación</a>
+          <a href="./data.html">Datos</a>
+          <a href="./flows.html">Flujos</a>
+        </nav>
+      </aside>
+      <div class="px-layout__content">
+        <main class="px-main">
+    <section class="px-hero">
+      <p class="px-kicker">Componente</p>
+      <h1 class="px-page-title">Botones</h1>
+      <p class="px-lead">Los botones Pinxel son píldoras claras y táctiles. La jerarquía se limita a primario, secundario, terciario, acento e icon button. Cada botón debe tener estados completos: default, hover, active, focus, disabled y loading.</p>
+    </section>
+
+    <section class="px-section">
+      <div class="px-section__head">
+        <h2>Jerarquía de botones</h2>
+        <p>Estas son las únicas variantes base. No crear nuevos colores de botón sin una razón de producto muy clara.</p>
+      </div>
+      <div class="px-grid px-grid--3">
+        <article class="px-spec">
+          <h3>Primario</h3>
+          <p>La acción principal de un bloque o flujo. Usar una sola vez por grupo de decisión.</p>
+          <div class="px-row"><button class="px-button px-button--primary" type="button">Crear producto</button></div>
+        </article>
+        <article class="px-spec">
+          <h3>Secundario</h3>
+          <p>Alternativa visible con borde. Acompaña al primario sin competir.</p>
+          <div class="px-row"><button class="px-button px-button--secondary" type="button">Guardar borrador</button></div>
+        </article>
+        <article class="px-spec">
+          <h3>Terciario</h3>
+          <p>Acción contextual de bajo énfasis. Se comporta como botón, pero lee como texto accionable.</p>
+          <div class="px-row"><button class="px-button px-button--tertiary" type="button">Ver detalles</button></div>
+        </article>
+        <article class="px-spec">
+          <h3>Acento</h3>
+          <p>Acción comercial puntual. No reemplaza al primario en confirmaciones críticas.</p>
+          <div class="px-row"><button class="px-button px-button--accent" type="button">Impulsar venta</button></div>
+        </article>
+        <article class="px-spec">
+          <h3>Icon button</h3>
+          <p>Herramienta compacta. Siempre debe tener <code>aria-label</code>.</p>
+          <div class="px-row">
+            <button class="px-icon-button" type="button" aria-label="Buscar">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m21 21-4.3-4.3M10.8 18a7.2 7.2 0 1 1 0-14.4 7.2 7.2 0 0 1 0 14.4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+        </article>
+        <article class="px-spec">
+          <h3>Tamaños</h3>
+          <p>Small solo para superficies densas; large para acciones de alta importancia.</p>
+          <div class="px-row">
+            <button class="px-button px-button--primary px-button--small" type="button">Small</button>
+            <button class="px-button px-button--primary px-button--large" type="button">Large</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="px-section">
+      <div class="px-section__head">
+        <h2>Estados del primario</h2>
+        <p>El botón primario debe ser inequívoco. Se usa para continuar, confirmar, crear, guardar o activar una automatización.</p>
+      </div>
+      <div class="px-button-state-grid">
+        <div class="px-button-state">
+          <span>Default</span>
+          <button class="px-button px-button--primary" type="button">Crear producto</button>
+        </div>
+        <div class="px-button-state">
+          <span>Hover</span>
+          <button class="px-button px-button--primary" type="button" style="background:#523b84; transform:translateY(-1px)">Crear producto</button>
+        </div>
+        <div class="px-button-state">
+          <span>Active / pressed</span>
+          <button class="px-button px-button--primary" type="button" aria-pressed="true">Crear producto</button>
+        </div>
+        <div class="px-button-state">
+          <span>Focus visible</span>
+          <button class="px-button px-button--primary px-button-demo-focus" type="button">Crear producto</button>
+        </div>
+        <div class="px-button-state">
+          <span>Disabled</span>
+          <button class="px-button px-button--primary" type="button" disabled>Crear producto</button>
+        </div>
+        <div class="px-button-state">
+          <span>Loading</span>
+          <button class="px-button px-button--primary" type="button" aria-busy="true">Guardando</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-section">
+      <div class="px-section__head">
+        <h2>Estados del secundario</h2>
+        <p>El secundario es una alternativa visible, con borde. Debe acompañar al primario sin competir con él.</p>
+      </div>
+      <div class="px-button-state-grid">
+        <div class="px-button-state">
+          <span>Default</span>
+          <button class="px-button px-button--secondary" type="button">Guardar borrador</button>
+        </div>
+        <div class="px-button-state">
+          <span>Hover</span>
+          <button class="px-button px-button--secondary" type="button" style="border-color:rgba(94,69,149,.42); box-shadow:var(--px-shadow-sm); transform:translateY(-1px)">Guardar borrador</button>
+        </div>
+        <div class="px-button-state">
+          <span>Active / pressed</span>
+          <button class="px-button px-button--secondary" type="button" aria-pressed="true">Guardar borrador</button>
+        </div>
+        <div class="px-button-state">
+          <span>Focus visible</span>
+          <button class="px-button px-button--secondary px-button-demo-focus" type="button">Guardar borrador</button>
+        </div>
+        <div class="px-button-state">
+          <span>Disabled</span>
+          <button class="px-button px-button--secondary" type="button" disabled>Guardar borrador</button>
+        </div>
+        <div class="px-button-state">
+          <span>Loading</span>
+          <button class="px-button px-button--secondary" type="button" aria-busy="true">Guardando</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-section">
+      <div class="px-section__head">
+        <h2>Estados del terciario</h2>
+        <p>El terciario es una acción de bajo énfasis. Funciona como texto accionable con área táctil de botón.</p>
+      </div>
+      <div class="px-button-state-grid">
+        <div class="px-button-state">
+          <span>Default</span>
+          <button class="px-button px-button--tertiary" type="button">Ver detalles</button>
+        </div>
+        <div class="px-button-state">
+          <span>Hover</span>
+          <button class="px-button px-button--tertiary" type="button" style="background:rgba(94,69,149,.09); transform:translateY(-1px)">Ver detalles</button>
+        </div>
+        <div class="px-button-state">
+          <span>Active / pressed</span>
+          <button class="px-button px-button--tertiary" type="button" aria-pressed="true">Ver detalles</button>
+        </div>
+        <div class="px-button-state">
+          <span>Focus visible</span>
+          <button class="px-button px-button--tertiary px-button-demo-focus" type="button">Ver detalles</button>
+        </div>
+        <div class="px-button-state">
+          <span>Disabled</span>
+          <button class="px-button px-button--tertiary" type="button" disabled>Ver detalles</button>
+        </div>
+        <div class="px-button-state">
+          <span>Danger tertiary</span>
+          <button class="px-button px-button--tertiary px-button--tertiary-danger" type="button">Eliminar</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-section">
+      <div class="px-section__head">
+        <h2>Estados del acento</h2>
+        <p>El acento naranja es comercial y puntual. Debe aparecer poco para conservar fuerza.</p>
+      </div>
+      <div class="px-button-state-grid">
+        <div class="px-button-state">
+          <span>Default</span>
+          <button class="px-button px-button--accent" type="button">Impulsar venta</button>
+        </div>
+        <div class="px-button-state">
+          <span>Hover</span>
+          <button class="px-button px-button--accent" type="button" style="background:#df8810; transform:translateY(-1px)">Impulsar venta</button>
+        </div>
+        <div class="px-button-state">
+          <span>Active / pressed</span>
+          <button class="px-button px-button--accent" type="button" aria-pressed="true">Impulsar venta</button>
+        </div>
+        <div class="px-button-state">
+          <span>Focus visible</span>
+          <button class="px-button px-button--accent px-button-demo-focus" type="button">Impulsar venta</button>
+        </div>
+        <div class="px-button-state">
+          <span>Disabled</span>
+          <button class="px-button px-button--accent" type="button" disabled>Impulsar venta</button>
+        </div>
+        <div class="px-button-state">
+          <span>Loading</span>
+          <button class="px-button px-button--accent" type="button" aria-busy="true">Procesando</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-section">
+      <div class="px-section__head">
+        <h2>Estados del icon button</h2>
+        <p>Los botones de icono sirven para herramientas compactas, nunca para acciones ambiguas. El nombre accesible es obligatorio.</p>
+      </div>
+      <div class="px-button-state-grid">
+        <div class="px-button-state">
+          <span>Default</span>
+          <button class="px-icon-button" type="button" aria-label="Buscar"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m21 21-4.3-4.3M10.8 18a7.2 7.2 0 1 1 0-14.4 7.2 7.2 0 0 1 0 14.4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+        </div>
+        <div class="px-button-state">
+          <span>Hover</span>
+          <button class="px-icon-button" type="button" aria-label="Buscar" style="border-color:rgba(94,69,149,.42); box-shadow:var(--px-shadow-sm); transform:translateY(-1px)"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m21 21-4.3-4.3M10.8 18a7.2 7.2 0 1 1 0-14.4 7.2 7.2 0 0 1 0 14.4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+        </div>
+        <div class="px-button-state">
+          <span>Active / pressed</span>
+          <button class="px-icon-button" type="button" aria-label="Buscar" aria-pressed="true"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m21 21-4.3-4.3M10.8 18a7.2 7.2 0 1 1 0-14.4 7.2 7.2 0 0 1 0 14.4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+        </div>
+        <div class="px-button-state">
+          <span>Focus visible</span>
+          <button class="px-icon-button px-button-demo-focus" type="button" aria-label="Buscar"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m21 21-4.3-4.3M10.8 18a7.2 7.2 0 1 1 0-14.4 7.2 7.2 0 0 1 0 14.4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+        </div>
+        <div class="px-button-state">
+          <span>Disabled</span>
+          <button class="px-icon-button" type="button" aria-label="Buscar" disabled><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m21 21-4.3-4.3M10.8 18a7.2 7.2 0 1 1 0-14.4 7.2 7.2 0 0 1 0 14.4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-section">
+      <div class="px-grid px-grid--2">
+        <article class="px-spec">
+          <h3>Anatomía</h3>
+          <ul>
+            <li>Altura base: <code>44px</code>; grande: <code>52px</code>.</li>
+            <li>Altura pequeña: <code>36px</code>, solo para barras densas o tablas.</li>
+            <li>Radio: <code>--px-radius-pill</code>.</li>
+            <li>Peso: <code>700</code>; tamaño: <code>15px</code>.</li>
+            <li>Iconos de 18px cuando acompañan texto.</li>
+            <li>Área táctil mínima: <code>44x44px</code> para acciones principales e icon buttons.</li>
+          </ul>
+        </article>
+        <article class="px-spec">
+          <h3>Uso</h3>
+          <ul>
+            <li>Primario: guardar, crear, confirmar, continuar.</li>
+            <li>Secundario: cancelar, guardar borrador, revisar.</li>
+            <li>Terciario: ver detalles, saltar, editar luego, abrir ayuda.</li>
+            <li>Acento naranja: momentos comerciales puntuales.</li>
+            <li>Turquesa no se usa como variante de botón; se reserva para progreso, badges y estados positivos.</li>
+            <li>Icon button: herramientas compactas con <code>aria-label</code>.</li>
+            <li>Loading: bloquear doble envío con <code>aria-busy="true"</code>.</li>
+            <li>Disabled: usar solo si la razón es evidente o se explica cerca del control.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="px-section">
+      <h2>Código base</h2>
+      <pre class="px-code">&lt;button class="px-button px-button--primary" type="button"&gt;Crear producto&lt;/button&gt;
+&lt;button class="px-button px-button--secondary" type="button"&gt;Guardar borrador&lt;/button&gt;
+&lt;button class="px-button px-button--tertiary" type="button"&gt;Ver detalles&lt;/button&gt;
+&lt;button class="px-button px-button--primary" type="button" aria-busy="true"&gt;Guardando&lt;/button&gt;
+&lt;button class="px-icon-button" type="button" aria-label="Buscar"&gt;...&lt;/button&gt;</pre>
+    </section>
+        </main>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

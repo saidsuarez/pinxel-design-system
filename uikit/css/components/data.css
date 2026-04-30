@@ -1,0 +1,91 @@
+.px-metric-card {
+  display: grid;
+  gap: var(--px-space-sm);
+  border: 1px solid var(--px-hairline);
+  border-radius: var(--px-radius-md);
+  background: var(--px-surface);
+  padding: var(--px-space-lg);
+}
+
+.px-metric-card__label {
+  color: var(--px-muted);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.px-metric-card__value {
+  color: var(--px-ink-strong);
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.px-metric-card__delta {
+  color: var(--px-muted);
+  font-size: 13px;
+}
+
+.px-metric-card__delta--up {
+  color: #1f7a76;
+}
+
+.px-metric-card__delta--warn {
+  color: #8a5200;
+}
+
+.px-progress {
+  display: grid;
+  gap: 8px;
+}
+
+.px-progress__meta {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--px-space-md);
+  color: var(--px-muted);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.px-progress__track {
+  height: 10px;
+  overflow: hidden;
+  border-radius: var(--px-radius-pill);
+  background: var(--px-hairline-soft);
+}
+
+.px-progress__bar {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--px-teal);
+}
+
+.px-status-list {
+  display: grid;
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid var(--px-hairline);
+  border-radius: var(--px-radius-md);
+  background: var(--px-hairline);
+}
+
+.px-status-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: var(--px-space-md);
+  align-items: center;
+  background: var(--px-surface);
+  padding: var(--px-space-md);
+}
+
+.px-status-row strong {
+  display: block;
+  color: var(--px-ink-strong);
+}
+
+.px-status-row span {
+  color: var(--px-muted);
+  font-size: 13px;
+}

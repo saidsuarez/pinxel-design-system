@@ -1,0 +1,104 @@
+.px-stepper {
+  display: grid;
+  gap: var(--px-space-md);
+}
+
+.px-step {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: var(--px-space-md);
+  border: 1px solid var(--px-hairline);
+  border-radius: var(--px-radius-md);
+  background: var(--px-surface);
+  padding: var(--px-space-md);
+}
+
+.px-step__number {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--px-radius-full);
+  background: var(--px-purple);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.px-step__title {
+  display: block;
+  color: var(--px-ink-strong);
+  font-weight: 800;
+}
+
+.px-step__text {
+  margin: 4px 0 0;
+  color: var(--px-muted);
+  font-size: 14px;
+}
+
+.px-preview-panel {
+  display: grid;
+  gap: var(--px-space-md);
+  border: 1px solid var(--px-hairline);
+  border-radius: var(--px-radius-lg);
+  background: var(--px-surface);
+  padding: var(--px-space-lg);
+}
+
+.px-preview-panel__canvas {
+  min-height: 260px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--px-radius-md);
+  background: var(--px-canvas-soft);
+}
+
+.px-preview-panel__object {
+  width: 180px;
+  aspect-ratio: 4 / 5;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--px-hairline);
+  border-radius: 24px;
+  background: #ffffff;
+  color: var(--px-purple);
+  font-weight: 800;
+  box-shadow: 0 18px 34px rgba(31, 31, 36, .12);
+}
+
+.px-automation-card {
+  display: grid;
+  gap: var(--px-space-md);
+  border: 1px solid var(--px-hairline);
+  border-radius: var(--px-radius-lg);
+  background: var(--px-surface);
+  padding: var(--px-space-lg);
+}
+
+.px-automation-card__header {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--px-space-md);
+}
+
+.px-automation-card__title {
+  margin: 0;
+  color: var(--px-ink-strong);
+  font-size: 20px;
+  line-height: 1.25;
+}
+
+.px-message {
+  border-radius: var(--px-radius-md);
+  background: var(--px-canvas-soft);
+  color: var(--px-ink);
+  padding: var(--px-space-md);
+}
+
+.px-message strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--px-ink-strong);
+  font-size: 13px;
+}
