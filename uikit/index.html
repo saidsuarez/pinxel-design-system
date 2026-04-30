@@ -103,10 +103,24 @@ Request:
 
       <section class="px-section">
         <div class="px-section__head">
-          <h2>Instalar como submodule</h2>
-          <p>Copia este comando dentro de cualquier proyecto donde quieras usar el sistema de diseño Pinxel como insumo base para Codex o para desarrollo.</p>
+          <h2>Instalar en proyectos</h2>
+          <p>Usa guía local ignorada cuando solo quieras contexto para IA. Usa submodule cuando el proyecto deba versionar exactamente qué versión del sistema de diseño utiliza.</p>
         </div>
-        <textarea class="px-prompt-box px-prompt-box--command" readonly spellcheck="false">git submodule add https://github.com/saidsuarez/pinxel-design-system.git design-system</textarea>
+        <div class="px-grid px-grid--2">
+          <article class="px-doc-card">
+            <h3>Guía local para IA</h3>
+            <p>Recomendado para proyectos Codex donde <code>design-system/</code> solo será insumo local y no debe entrar al repo del proyecto.</p>
+            <textarea class="px-prompt-box px-prompt-box--command" readonly spellcheck="false">git clone https://github.com/saidsuarez/pinxel-design-system.git design-system
+echo "design-system/" >> .gitignore</textarea>
+          </article>
+          <article class="px-doc-card">
+            <h3>Submodule versionado</h3>
+            <p>Úsalo cuando el proyecto deba guardar una referencia exacta al commit del sistema de diseño y compartirla con el equipo.</p>
+            <textarea class="px-prompt-box px-prompt-box--command" readonly spellcheck="false">git submodule add https://github.com/saidsuarez/pinxel-design-system.git design-system
+git add .gitmodules design-system
+git commit -m "Add Pinxel design system submodule"</textarea>
+          </article>
+        </div>
       </section>
 
       <section class="px-section">

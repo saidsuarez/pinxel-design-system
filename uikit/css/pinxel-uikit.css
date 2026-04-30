@@ -339,7 +339,7 @@ select {
 }
 
 .px-prompt-box--command {
-  min-height: 96px;
+  min-height: 132px;
   resize: none;
 }
 
