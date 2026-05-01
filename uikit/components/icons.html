@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Iconografía · UIKit Pinxel</title>
+  <link rel="stylesheet" href="../css/pinxel-uikit.css">
+  <link rel="stylesheet" href="../css/components/buttons.css">
+  <link rel="stylesheet" href="../css/components/icons.css">
+</head>
+<body>
+  <div class="px-shell">
+    <div class="px-layout">
+      <aside class="px-sidebar" aria-label="Navegación principal">
+        <a class="px-sidebar__brand" href="../index.html" aria-label="UIKit Pinxel">
+          <img src="../../assets/pinxel-logo.svg" alt="Pinxel">
+        </a>
+        <nav class="px-sidebar__nav" aria-label="Componentes">
+          <a href="../index.html">Inicio</a>
+          <a href="./buttons.html">Botones</a>
+          <a href="./forms.html">Formularios</a>
+          <a href="./cards.html">Tarjetas</a>
+          <a href="./icons.html" aria-current="page">Iconografía</a>
+          <a href="./badges-alerts.html">Estados</a>
+          <a href="./navigation-tabs.html">Navegación</a>
+          <a href="./data.html">Datos</a>
+          <a href="./flows.html">Flujos</a>
+        </nav>
+      </aside>
+      <div class="px-layout__content">
+        <main class="px-main">
+    <section class="px-hero">
+      <p class="px-kicker">Fundación visual</p>
+      <h1 class="px-page-title">Iconografía</h1>
+      <p class="px-lead">Lucide es la familia base para iconos funcionales de Pinxel. Usar SVG, trazo simple, color heredado y significado claro en interfaces web, WordPress, dashboards y archivos de diseño.</p>
+    </section>
+
+    <section class="px-section">
+      <div class="px-section__head">
+        <h2>Set base</h2>
+        <p>Estos iconos representan el lenguaje funcional: herramientas claras, geométricas y de bajo ruido visual.</p>
+      </div>
+      <div class="px-icon-demo-grid">
+        <article class="px-icon-demo">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/><path d="m21 21-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Search</span>
+        </article>
+        <article class="px-icon-demo">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M2 14h4M10 8h4M18 16h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Sliders</span>
+        </article>
+        <article class="px-icon-demo">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 20h9M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Edit</span>
+        </article>
+        <article class="px-icon-demo">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Download</span>
+        </article>
+        <article class="px-icon-demo">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m15 18-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Chevron left</span>
+        </article>
+        <article class="px-icon-demo">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m9 18 6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Chevron right</span>
+        </article>
+        <article class="px-icon-demo">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M12 16v-4M12 8h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Info</span>
+        </article>
+        <article class="px-icon-demo">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Check</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="px-section">
+      <div class="px-section__head">
+        <h2>Tamaños y color</h2>
+        <p>El icono hereda el color del componente con <code>currentColor</code>. No usar rellenos decorativos ni combinar estilos.</p>
+      </div>
+      <div class="px-grid px-grid--2">
+        <article class="px-spec">
+          <h3>Tamaños</h3>
+          <div class="px-icon-size-row">
+            <span class="px-icon-size">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/><path d="m21 21-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              18px con texto
+            </span>
+            <span class="px-icon-size">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/><path d="m21 21-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              20px icon button
+            </span>
+            <span class="px-icon-size">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/><path d="m21 21-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              24px muestra
+            </span>
+          </div>
+        </article>
+        <article class="px-spec">
+          <h3>Color por estado</h3>
+          <div class="px-icon-color-row">
+            <span class="px-icon-color"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M12 16v-4M12 8h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="px-icon-color px-icon-color--purple"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M12 16v-4M12 8h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="px-icon-color px-icon-color--teal"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="px-icon-color px-icon-color--orange"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.46 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 9v4M12 17h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="px-icon-color px-icon-color--subtle"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m15 9-6 6M9 9l6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="px-section">
+      <div class="px-grid px-grid--2">
+        <article class="px-spec">
+          <h3>Reglas</h3>
+          <ul>
+            <li>Usar Lucide como set base de iconos UI.</li>
+            <li>En React, usar <code>lucide-react</code> como componentes SVG; no icon font.</li>
+            <li>Usar SVG inline, sprite SVG o helper del theme/plugin en WordPress.</li>
+            <li>Importar SVG editable en Illustrator y Photoshop.</li>
+            <li>Usar <code>currentColor</code> para que el estado del componente controle el icono.</li>
+            <li>Los botones solo de icono necesitan <code>aria-label</code>.</li>
+          </ul>
+        </article>
+        <article class="px-spec">
+          <h3>No usar</h3>
+          <ul>
+            <li>No usar icon fonts como primera opción.</li>
+            <li>No usar icon font en React salvo integración legacy, requisito del cliente o dependencia externa que lo exija.</li>
+            <li>No mezclar Lucide con sets filled o estilos ilustrativos en la misma interfaz.</li>
+            <li>No usar iconos ambiguos para acciones críticas sin texto cercano.</li>
+            <li>No convertir Lucide en sistema de ilustración de marca.</li>
+            <li>No cambiar stroke, esquinas o proporción por icono de forma aislada.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="px-section">
+      <div class="px-section__head">
+        <h2>Recursos</h2>
+        <p>Usar estas fuentes oficiales para buscar, descargar, instalar o integrar iconos. En WordPress y sitios estáticos, priorizar SVG inline o sprite.</p>
+      </div>
+      <div class="px-grid px-grid--3">
+        <article class="px-doc-card">
+          <h3>Buscar y descargar</h3>
+          <p><a href="https://lucide.dev/icons" target="_blank" rel="noreferrer">Lucide Icons</a> permite buscar iconos, copiar SVG y revisar nombres oficiales.</p>
+        </article>
+        <article class="px-doc-card">
+          <h3>Guía oficial</h3>
+          <p><a href="https://lucide.dev/guide/" target="_blank" rel="noreferrer">Lucide Guide</a> cubre instalación, accesibilidad, color, tamaño y stroke.</p>
+        </article>
+        <article class="px-doc-card">
+          <h3>Paquetes</h3>
+          <p><a href="https://lucide.dev/packages" target="_blank" rel="noreferrer">Lucide Packages</a> lista paquetes oficiales para web, React, Vue, Svelte, Angular, Astro y static assets.</p>
+        </article>
+        <article class="px-doc-card">
+          <h3>Repositorio</h3>
+          <p><a href="https://github.com/lucide-icons/lucide" target="_blank" rel="noreferrer">GitHub</a> contiene el código fuente, releases, issues, contribuciones y licencia.</p>
+        </article>
+        <article class="px-doc-card">
+          <h3>Figma</h3>
+          <p><a href="https://www.figma.com/community/plugin/939567362549682242/lucide-icons" target="_blank" rel="noreferrer">Lucide Icons plugin</a> sirve para insertar iconos directamente en archivos de diseño.</p>
+        </article>
+        <article class="px-doc-card">
+          <h3>Diseñar iconos</h3>
+          <p><a href="https://lucide.dev/contribute/icon-design-guide" target="_blank" rel="noreferrer">Icon Design Guide</a> define canvas 24x24, stroke 2px, caps redondos, joins redondos y reglas de consistencia.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="px-section">
+      <h2>Código base</h2>
+      <pre class="px-code">&lt;button class="px-icon-button" type="button" aria-label="Buscar"&gt;
+  &lt;svg viewBox="0 0 24 24" fill="none" aria-hidden="true"&gt;
+    &lt;circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/&gt;
+    &lt;path d="m21 21-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/&gt;
+  &lt;/svg&gt;
+&lt;/button&gt;</pre>
+      <pre class="px-code"># NPM
+npm install lucide@next
+npm install lucide-react@next
+npm install lucide-static@next
+
+# CDN para prototipos o sitios simples
+https://unpkg.com/lucide@latest
+https://unpkg.com/lucide@latest/dist/umd/lucide.js
+https://www.jsdelivr.com/package/npm/lucide
+
+# Static assets para SVG, sprite o icon font
+https://www.npmjs.com/package/lucide-static</pre>
+    </section>
+        </main>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

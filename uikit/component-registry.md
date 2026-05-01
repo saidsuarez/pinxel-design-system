@@ -14,6 +14,31 @@ Read first:
 
 Global foundation includes tokens, typography, layout, spacing, color roles, documentation layout, tables, grids, stages, cards, and shared utilities.
 
+## Iconography
+
+Files:
+
+- `brandbook/pinxel-brandbook.md`, Iconography section
+- `uikit/components/icons.html`
+- `uikit/css/components/icons.css`
+
+Use for:
+
+- Product UI icons, WordPress themes/plugins, dashboards, navigation, forms, toolbars, alerts, status states, and compact actions.
+- Illustrator, Photoshop, and design-file icon placement when a functional UI icon is needed.
+
+Rules:
+
+- Lucide is the default Pinxel UI icon family.
+- Use SVG as the primary format.
+- In React, use `lucide-react` components. Do not use icon fonts unless a legacy integration, client requirement, or external dependency requires them.
+- For WordPress, prefer inline SVG, SVG sprites, or a theme/plugin icon helper; avoid icon fonts unless required by legacy constraints.
+- For Illustrator and Photoshop, import Lucide icons as editable SVG vectors.
+- Use `currentColor` for web UI icons so component states control the icon color.
+- Keep icon size and stroke consistent with the component: 18px with button text, 18px to 20px inside icon-only buttons.
+- Do not mix unrelated icon styles in the same interface.
+- Custom brand or product-line icons may be created, but they should match Lucide's simple outline language when used inside UI.
+
 ## Buttons
 
 Files:

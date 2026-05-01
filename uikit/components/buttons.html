@@ -19,6 +19,7 @@
           <a href="./buttons.html" aria-current="page">Botones</a>
           <a href="./forms.html">Formularios</a>
           <a href="./cards.html">Tarjetas</a>
+          <a href="./icons.html">Iconografía</a>
           <a href="./badges-alerts.html">Estados</a>
           <a href="./navigation-tabs.html">Navegación</a>
           <a href="./data.html">Datos</a>
@@ -64,7 +65,7 @@
           <p>Herramienta compacta. Siempre debe tener <code>aria-label</code>.</p>
           <div class="px-row">
             <button class="px-icon-button" type="button" aria-label="Buscar">
-              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m21 21-4.3-4.3M10.8 18a7.2 7.2 0 1 1 0-14.4 7.2 7.2 0 0 1 0 14.4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/><path d="m21 21-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
           </div>
         </article>
@@ -219,23 +220,23 @@
       <div class="px-button-state-grid">
         <div class="px-button-state">
           <span>Default</span>
-          <button class="px-icon-button" type="button" aria-label="Buscar"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m21 21-4.3-4.3M10.8 18a7.2 7.2 0 1 1 0-14.4 7.2 7.2 0 0 1 0 14.4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+          <button class="px-icon-button" type="button" aria-label="Buscar"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/><path d="m21 21-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         </div>
         <div class="px-button-state">
           <span>Hover</span>
-          <button class="px-icon-button" type="button" aria-label="Buscar" style="border-color:rgba(94,69,149,.42); box-shadow:var(--px-shadow-sm); transform:translateY(-1px)"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m21 21-4.3-4.3M10.8 18a7.2 7.2 0 1 1 0-14.4 7.2 7.2 0 0 1 0 14.4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+          <button class="px-icon-button" type="button" aria-label="Buscar" style="border-color:rgba(94,69,149,.42); box-shadow:var(--px-shadow-sm); transform:translateY(-1px)"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/><path d="m21 21-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         </div>
         <div class="px-button-state">
           <span>Active / pressed</span>
-          <button class="px-icon-button" type="button" aria-label="Buscar" aria-pressed="true"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m21 21-4.3-4.3M10.8 18a7.2 7.2 0 1 1 0-14.4 7.2 7.2 0 0 1 0 14.4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+          <button class="px-icon-button" type="button" aria-label="Buscar" aria-pressed="true"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/><path d="m21 21-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         </div>
         <div class="px-button-state">
           <span>Focus visible</span>
-          <button class="px-icon-button px-button-demo-focus" type="button" aria-label="Buscar"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m21 21-4.3-4.3M10.8 18a7.2 7.2 0 1 1 0-14.4 7.2 7.2 0 0 1 0 14.4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+          <button class="px-icon-button px-button-demo-focus" type="button" aria-label="Buscar"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/><path d="m21 21-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         </div>
         <div class="px-button-state">
           <span>Disabled</span>
-          <button class="px-icon-button" type="button" aria-label="Buscar" disabled><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m21 21-4.3-4.3M10.8 18a7.2 7.2 0 1 1 0-14.4 7.2 7.2 0 0 1 0 14.4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+          <button class="px-icon-button" type="button" aria-label="Buscar" disabled><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/><path d="m21 21-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         </div>
       </div>
     </section>
@@ -275,7 +276,12 @@
 &lt;button class="px-button px-button--secondary" type="button"&gt;Guardar borrador&lt;/button&gt;
 &lt;button class="px-button px-button--tertiary" type="button"&gt;Ver detalles&lt;/button&gt;
 &lt;button class="px-button px-button--primary" type="button" aria-busy="true"&gt;Guardando&lt;/button&gt;
-&lt;button class="px-icon-button" type="button" aria-label="Buscar"&gt;...&lt;/button&gt;</pre>
+&lt;button class="px-icon-button" type="button" aria-label="Buscar"&gt;
+  &lt;svg viewBox="0 0 24 24" fill="none" aria-hidden="true"&gt;
+    &lt;circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/&gt;
+    &lt;path d="m21 21-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/&gt;
+  &lt;/svg&gt;
+&lt;/button&gt;</pre>
     </section>
         </main>
       </div>

@@ -186,6 +186,30 @@ Keep free space around the logo equal to the height of the dot over the "i". For
 - In light theme, the interface should be mostly white or very light gray.
 - In dark theme, avoid pure black except for overlays or media; use nuanced dark surfaces.
 
+## Iconography
+
+Lucide is the default icon family for Pinxel interface design.
+
+Use Lucide for:
+
+- Product UI, websites, dashboards, WordPress themes, plugins, forms, toolbars, navigation, status states, and compact actions.
+- Interface icons inside buttons, menu items, filters, empty states, alerts, and operational workflows.
+- SVG-based implementation in web projects.
+
+Do not treat Lucide as the complete brand illustration system. It is the functional UI icon base. Brand-specific symbols, campaign graphics, product-line marks, and expressive illustrations may be custom, but they should still feel compatible with Pinxel's geometry, stroke weight, and restrained visual tone.
+
+### Technical Rules
+
+- Use SVG as the primary icon format.
+- For React, use `lucide-react` SVG components. Do not use icon fonts unless a legacy integration, client requirement, or external dependency requires them.
+- For WordPress, prefer inline SVG, SVG sprite, or a theme/plugin icon helper. Avoid icon fonts unless a legacy constraint requires them.
+- For Illustrator, Photoshop, and other design tools, import Lucide icons as editable SVG vectors.
+- Keep icon stroke visually consistent with Lucide's default outline style.
+- Use `currentColor` for interface icons so color follows the component state.
+- Use 18px icons when paired with button text and 18px to 20px icons inside icon-only buttons.
+- Do not mix Lucide with unrelated icon styles in the same interface.
+- Custom icons should be drawn to match Lucide's simple outline language before being added to the system.
+
 ## Typography
 
 ### Font Family
