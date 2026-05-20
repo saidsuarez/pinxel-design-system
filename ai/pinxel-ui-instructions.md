@@ -67,6 +67,11 @@ Read these files before generating a Pinxel product, app, website, dashboard, fl
 
 - Write short, active, concrete UI copy.
 - Avoid corporate jargon and vague technology claims.
+- Write content for the end customer, not for the requester or the AI.
+- Do not insert annotations, explanations, implementation notes, request summaries, or clarifications inside customer-facing content.
+- Treat user requests as direction for the work, not as text to repeat in headings, paragraphs, cards, alerts, badges, helper text, or CTAs.
+- Every piece of visible content should deliver value, reduce friction, create confidence, or move the customer toward a useful conversion.
+- Use conversion-oriented copy: clear benefits, specific outcomes, natural next steps, and action language that matches the customer's intent.
 - Make AI feel practical and useful, not abstract.
 - When showing automation, expose the flow, message, status, or result.
 - Pinxel is about personalized experiences powered by technology, not just products.
@@ -96,4 +101,6 @@ Use light theme by default.
 Use Inter.
 Use purple for primary actions, orange for commercial emphasis, teal for progress/success/live states, and charcoal for text/structure.
 Use pill buttons, visible focus, labeled form fields, and complete component states.
+Write customer-facing content only: no annotations, request summaries, internal clarifications, or explanations of the requested change inside visible copy.
+Make every visible text useful, client-oriented, and conversion-focused.
 ```

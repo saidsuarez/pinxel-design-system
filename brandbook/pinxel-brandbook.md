@@ -89,6 +89,10 @@ Pinxel speaks in short, active, concrete sentences. Avoid corporate solemnity, u
 
 The tone should balance three ideas: custom creation, useful technology, and human connection. Even when discussing AI or automation, the language should stay practical and user-centered.
 
+Content must always be written for the customer who will use, buy, compare, or decide. User requests, design notes, implementation explanations, and change clarifications are instructions for the creator, not visible content. Do not turn them into headings, paragraphs, badges, alerts, helper text, or CTA copy.
+
+Every visible line should help the customer understand value, feel confidence, take the next step, or complete a conversion. Prefer benefits, concrete outcomes, and natural action language over meta explanations about what was requested or changed.
+
 **Use**
 
 - "Customize your product"
@@ -105,6 +109,9 @@ The tone should balance three ideas: custom creation, useful technology, and hum
 - "Experience a new digital dimension"
 - "Click here to proceed"
 - "AI-powered hyperpersonalized omnichannel revolution"
+- "This section was added to explain the requested change"
+- "As requested, this card now shows the new offer"
+- "Clarification: this content is for conversion"
 
 ## Logo
 
