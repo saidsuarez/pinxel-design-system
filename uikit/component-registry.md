@@ -160,13 +160,14 @@ Files:
 
 Use for:
 
-- Product personalization, commerce automation, WhatsApp/chatbot flows, and AI-assisted workflows.
+- Product personalization, commerce automation, WhatsApp flows, custom chatbots, virtual agents, and AI-assisted workflows.
 
 Rules:
 
 - Show the user where they are in the process.
 - Make the product preview, options, customer data, and confirmation easy to follow.
 - Show AI as a practical assistant through steps, messages, states, and results.
+- Do not present Bruna as a generic product. Bruna is Pinxel's own assistant; client-facing services should be framed as custom chatbots, virtual agents, or conversational automation.
 
 ## When A Component Is Missing
 

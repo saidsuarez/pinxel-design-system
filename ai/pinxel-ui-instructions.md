@@ -70,6 +70,8 @@ Read these files before generating a Pinxel product, app, website, dashboard, fl
 - Make AI feel practical and useful, not abstract.
 - When showing automation, expose the flow, message, status, or result.
 - Pinxel is about personalized experiences powered by technology, not just products.
+- Bruna is Pinxel's own virtual agent and chatbot, not a standalone product line.
+- When promoting services, refer to custom chatbots, virtual agents, conversational assistants, WhatsApp flows, or automation systems instead of selling "Bruna" as the offer.
 
 ## Default Prompt Pattern
 

@@ -40,7 +40,7 @@ Pinxel is the combination of:
 
 - **A personalized product brand:** notebooks, apparel, accessories, pet records, portraits, and other customizable physical products.
 - **A digital solutions lab:** branding, UX, web development, e-commerce, plugins, and scalable systems.
-- **An AI-powered commerce automation platform:** WhatsApp sales flows, chatbots, lead generation, customer follow-up, and hybrid digital/physical experiences.
+- **A conversational automation service:** custom chatbots, virtual agents, WhatsApp sales flows, lead generation, customer follow-up, and hybrid digital/physical experiences.
 
 Core concept:
 
@@ -60,11 +60,17 @@ Custom frames and portraits for spaces, identity, memory, emotion, and personal 
 
 ### Pinxel Lab
 
-Design, development, and artificial intelligence for digital products and scalable systems. This includes WooCommerce plugins, branding and UX, web/e-commerce development, automated sales systems, WhatsApp/chatbot flows, courses, and digital products.
+Design, development, and artificial intelligence for digital products and scalable systems. This includes WooCommerce plugins, branding and UX, web/e-commerce development, custom chatbots, virtual agents, automated sales systems, WhatsApp flows, courses, and digital products.
 
 Tagline direction for Pinxel Lab:
 
 **Where ideas become real products.**
+
+### Bruna
+
+Bruna is Pinxel's own virtual agent and chatbot. She may appear as part of Pinxel's internal workflow, customer support, or guided commerce experience, but she should not be presented as a standalone product line, service package, or brand for sale.
+
+The commercial offer is the design and development of custom chatbots, virtual agents, conversational assistants, and automation flows. These solutions can have their own client-specific names, tone, personality, and workflows.
 
 ## Brand Essence
 
@@ -88,6 +94,8 @@ The tone should balance three ideas: custom creation, useful technology, and hum
 - "Customize your product"
 - "Create a real product from your idea"
 - "Automate your sales flow"
+- "Build a virtual agent for your business"
+- "Design a chatbot that fits your customer journey"
 - "Connect WhatsApp to your store"
 - "Your pet record is ready"
 
@@ -708,6 +716,7 @@ Restrained footer with logo, links, and legal data.
 - Present AI as a practical assistant, not as magic.
 - Explain what the automation will do, when it will act, and what the user can control.
 - For chatbots and follow-up systems, show status, owner, last interaction, and next step.
+- Keep Bruna as Pinxel's own assistant. Do not market Bruna as the product; market the development of custom chatbots, virtual agents, and automation flows.
 - Avoid abstract AI visuals when a workflow, message, or result can be shown.
 
 ### Mobile

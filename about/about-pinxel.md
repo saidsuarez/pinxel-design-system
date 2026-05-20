@@ -24,7 +24,8 @@ Incluye:
 - Plugins (especialmente para WooCommerce)
 - Branding y UX
 - Desarrollo web (con o sin e-commerce)
-- Sistemas de ventas automatizados (funnels, chatbots, WhatsApp)
+- Desarrollo de chatbots, asistentes virtuales y agentes conversacionales
+- Sistemas de ventas automatizados (funnels, WhatsApp, seguimiento y atención)
 - Cursos y productos digitales
 
 > Donde las ideas se convierten en productos reales.
@@ -38,7 +39,8 @@ Pinxel no se limita a productos físicos. También se proyecta como un **ecosist
 Incluye:
 
 - Plugins para WooCommerce (pedidos por WhatsApp y personalización avanzada de productos)
-- Flujos automatizados de ventas con IA (chatbots, seguimiento de clientes, generación de leads)
+- Flujos automatizados de ventas con IA (agentes virtuales, seguimiento de clientes, generación de leads)
+- Chatbots y asistentes conversacionales desarrollados a la medida de cada negocio
 - Plataformas híbridas como el registro veterinario digital con NFC
 
 ---
@@ -69,15 +71,17 @@ Dirige y ejecuta la estrategia de contenidos, desarrollando piezas audiovisuales
 
 ---
 
-## Bruna — Agente IA de Pinxel
+## Bruna — Agente Virtual de Pinxel
 
-Bruna es la agente de inteligencia artificial de Pinxel. Forma parte del sistema interno de creación y también actúa como asistente para clientes.
+Bruna es el agente virtual y chatbot propio de Pinxel. No es una línea de producto ni un servicio que se venda como marca independiente; es una presencia interna y de atención que demuestra cómo Pinxel integra la inteligencia artificial en experiencias reales.
 
 Internamente, Bruna apoya procesos de conceptualización, generación de ideas y estructuración de productos, integrando inteligencia artificial en el flujo creativo del equipo.
 
 De cara al cliente, funciona como asistente digital capaz de resolver dudas, guiar procesos de compra y facilitar la interacción con los productos y servicios de Pinxel.
 
-> Bruna conecta la creatividad humana con la eficiencia de la inteligencia artificial.
+El servicio comercial asociado no se llama necesariamente Bruna. Pinxel ofrece desarrollo de chatbots, agentes virtuales, asistentes conversacionales y automatizaciones de atención o ventas, cada uno adaptado al negocio, tono y flujo de cada cliente.
+
+> Bruna acompaña la experiencia Pinxel; el producto es la solución conversacional que se diseña para cada cliente.
 
 ---
 
@@ -98,4 +102,3 @@ Convertirse en una plataforma líder en personalización de productos y herramie
 ## Concepto Clave
 
 **No vendemos productos. Creamos experiencias personalizadas impulsadas por tecnología.**
-
